@@ -7,7 +7,7 @@ export default function Experience() {
       <div className="mt-6 space-y-8 border-l border-border pl-6">
         {experience.map((job) => (
           <div key={`${job.company}-${job.role}`} className="relative">
-            <span className="absolute -left-[29px] top-1.5 h-2.5 w-2.5 rounded-full bg-accent" />
+            <span className="absolute -left-[31px] top-1 h-3.5 w-3.5 rounded-full border-2 border-background bg-accent ring-4 ring-accent/15" />
             <div className="flex flex-wrap items-baseline justify-between gap-2">
               <h3 className="font-semibold">
                 {job.role} · <span className="text-muted">{job.company}</span>

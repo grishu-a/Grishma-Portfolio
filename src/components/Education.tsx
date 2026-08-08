@@ -1,4 +1,5 @@
 import { education } from "@/lib/data";
+import { GraduationCapIcon } from "./icons";
 
 export default function Education() {
   return (
@@ -6,12 +7,14 @@ export default function Education() {
       <h2 className="eyebrow">05 · Education</h2>
       <div className="mt-6 grid gap-6 sm:grid-cols-2">
         {education.map((item) => (
-          <div
-            key={item.school}
-            className="rounded-2xl border border-border bg-card p-5"
-          >
-            <h3 className="font-semibold">{item.school}</h3>
-            <p className="mt-1 text-sm text-muted">{item.degree}</p>
+          <div key={item.school} className="card-surface flex items-start gap-4 p-5">
+            <span className="icon-badge h-10 w-10">
+              <GraduationCapIcon className="h-5 w-5" />
+            </span>
+            <div>
+              <h3 className="font-semibold">{item.school}</h3>
+              <p className="mt-1 text-sm text-muted">{item.degree}</p>
+            </div>
           </div>
         ))}
       </div>

@@ -9,6 +9,7 @@
   --card: #f8fafc;
   --border: #e2e8f0;
   --accent: #4f46e5;
+  --accent-2: #7c3aed;
   --accent-foreground: #ffffff;
 }
 
@@ -19,6 +20,7 @@
   --card: #13131a;
   --border: #232330;
   --accent: #818cf8;
+  --accent-2: #c4b5fd;
   --accent-foreground: #0a0a0f;
 }
 
@@ -29,6 +31,7 @@
   --color-card: var(--card);
   --color-border: var(--border);
   --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
   --color-accent-foreground: var(--accent-foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -44,9 +47,58 @@ body {
 }
 
 .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   font-family: var(--font-mono);
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   color: var(--accent);
+}
+
+.icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 0.75rem;
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--accent);
+}
+
+.card-surface {
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  background: var(--card);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.card-surface:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+  box-shadow: 0 16px 32px -18px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 12px 24px -12px color-mix(in srgb, var(--accent) 60%, transparent);
+}
+
+.blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(64px);
+  opacity: 0.35;
+  pointer-events: none;
 }

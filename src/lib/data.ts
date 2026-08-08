@@ -146,11 +146,6 @@ export const education = [
 
 export const certifications = [
   {
-    title: "Social Media Marketing",
-    issuer: "Hootsuite",
-    issued: "Jun 2026",
-  },
-  {
     title: "Product Owner Roles, Scrum & Beyond",
     issuer: "F1Soft International Pvt. Ltd.",
     issued: "Mar 2025",
@@ -189,5 +184,10 @@ export const certifications = [
     issuer: "Google",
     issued: "Jul 2024",
     credentialUrl: "https://www.coursera.org/account/accomplishments/certificate/6WMCTXX2FTCS",
+  },
+  {
+    title: "Social Media Marketing",
+    issuer: "Hootsuite",
+    issued: "Jun 2026",
   },
 ];

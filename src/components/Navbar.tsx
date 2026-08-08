@@ -13,13 +13,23 @@ const links = [
 ];
 
 export default function Navbar() {
+  const initials = profile.name
+    .split(" ")
+    .map((part) => part[0])
+    .join("");
+
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <Link href="#top" className="font-mono text-sm font-semibold tracking-tight">
-          {profile.name}
+        <Link href="#top" className="flex items-center gap-2.5">
+          <span className="btn-primary flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold text-accent-foreground">
+            {initials}
+          </span>
+          <span className="font-mono text-sm font-semibold tracking-tight">
+            {profile.name}
+          </span>
         </Link>
-        <div className="hidden items-center gap-6 sm:flex">
+        <div className="hidden items-center gap-6 lg:flex">
           {links.map((link) => (
             <Link
               key={link.href}
@@ -33,7 +43,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <Link
             href="#contact"
-            className="hidden rounded-full bg-accent px-4 py-1.5 text-sm font-medium text-accent-foreground transition-opacity hover:opacity-90 sm:inline-block"
+            className="btn-primary hidden rounded-full px-4 py-1.5 text-sm font-medium text-accent-foreground transition-opacity hover:opacity-90 sm:inline-block"
           >
             Get in touch
           </Link>
