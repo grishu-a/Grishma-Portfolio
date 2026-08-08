@@ -143,3 +143,51 @@ export const education = [
     degree: "Computer Systems Engineering",
   },
 ];
+
+export const certifications = [
+  {
+    title: "Social Media Marketing",
+    issuer: "Hootsuite",
+    issued: "Jun 2026",
+  },
+  {
+    title: "Product Owner Roles, Scrum & Beyond",
+    issuer: "F1Soft International Pvt. Ltd.",
+    issued: "Mar 2025",
+  },
+  {
+    title: "Product Foundations",
+    issuer: "Product Vidhyalaya",
+    issued: "Apr 2025",
+    credentialUrl: "https://credsverse.com/credentials/d01f0231-ed02-481d-b26f-7d6c163951de",
+  },
+  {
+    title: "Mastering Software Architecture",
+    issuer: "Nepal Mentor",
+    issued: "Apr 2025",
+  },
+  {
+    title: "Registered Product Owner™",
+    issuer: "Agile Education by Scrum Inc.™",
+    issued: "Oct 2024",
+    expired: "Oct 2025",
+    credentialUrl: "https://s3.amazonaws.com/scruminc-certs/RPO-4516817",
+  },
+  {
+    title: "Scrum Master Capstone",
+    issuer: "Google",
+    issued: "Sep 2024",
+    credentialUrl: "https://coursera.org/share/4257b9db405d76a0af459c7b8fc3e884",
+  },
+  {
+    title: "Project Execution: Running the Project",
+    issuer: "Google",
+    credentialUrl: "https://coursera.org/share/83641d0c1bca507d808f76bca513b9eb",
+  },
+  {
+    title: "Agile Project Management",
+    issuer: "Google",
+    issued: "Jul 2024",
+    credentialUrl: "https://www.coursera.org/account/accomplishments/certificate/6WMCTXX2FTCS",
+  },
+];

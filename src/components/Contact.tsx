@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <section id="contact" className="mx-auto max-w-5xl px-6 py-20">
       <div className="rounded-3xl border border-border bg-card px-8 py-14 text-center">
-        <h2 className="eyebrow">06 · Contact</h2>
+        <h2 className="eyebrow">07 · Contact</h2>
         <h3 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
           Let&apos;s build something together
         </h3>
