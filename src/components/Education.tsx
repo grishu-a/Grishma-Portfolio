@@ -2,18 +2,17 @@ import { education } from "@/lib/data";
 
 export default function Education() {
   return (
-    <section id="education" className="mx-auto max-w-5xl px-6 py-16">
-      <h2 className="text-sm font-mono text-accent">05 · Education</h2>
-      <div className="mt-6 grid gap-6 sm:grid-cols-2">
-        {education.map((item) => (
-          <div
-            key={item.school}
-            className="rounded-2xl border border-border bg-card p-5"
-          >
-            <h3 className="font-semibold">{item.school}</h3>
-            <p className="mt-1 text-sm text-muted">{item.degree}</p>
-          </div>
-        ))}
+    <section id="education" className="border-t border-border px-6 py-16 sm:px-10 sm:py-24">
+      <div className="mx-auto max-w-6xl">
+        <p className="kicker text-accent">05 · Education</p>
+        <div className="mt-8 grid gap-px overflow-hidden border border-border sm:grid-cols-2">
+          {education.map((item) => (
+            <div key={item.school} className="bg-card p-6 sm:p-8">
+              <h3 className="text-xl font-black lowercase">{item.school}</h3>
+              <p className="mt-2 text-sm text-muted">{item.degree}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
