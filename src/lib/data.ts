@@ -1,9 +1,9 @@
 export const profile = {
   name: "Grishma Amatya",
-  role: "Project & Product Manager | FinTech Specialist",
+  role: "Project & Product Manager | Fintech Specialist",
   tagline:
     "I turn ambiguous problems into shipped fintech products — from dispute resolution to cross-border payments.",
-  bio: "I'm a project and product manager with a focus on FinTech, currently bridging academia and industry as a Teaching Associate at Macquarie University. Before that, I led end-to-end delivery of payment products at Fonepay — including a Dispute Management System, Alipay+ cross-border payments, and the Fonepay Circle peer-to-peer network — working across product, tech, and operations to support thousands of daily transactions. I care about clear ownership, cross-functional alignment, and building products that create measurable impact.",
+  bio: "I'm a project and product manager with a focus on fintech, currently bridging academia and industry as a Teaching Associate at Macquarie University. Before that, I led end-to-end delivery of payment products at Fonepay — including the Dispute Management System, Alipay+ cross-border payments, and the Fonepay Circle peer-to-peer network — working across product, tech, and operations to support thousands of daily transactions. I care about clear ownership, cross-functional alignment, and building products that create measurable impact.",
   location: "Sydney, NSW, Australia",
   email: "amatya650@gmail.com",
   resumeUrl: "/resume.pdf",
@@ -24,9 +24,9 @@ export const skills = [
     ],
   },
   {
-    category: "FinTech",
+    category: "Fintech",
     items: [
-      "FinTech Strategy & Innovation",
+      "Fintech Strategy & Innovation",
       "Cross-Border Payments",
       "Dispute Management Systems",
       "Digital Wallets & QR Payments",
@@ -48,13 +48,13 @@ export const projects = [
     title: "Dispute Management System",
     description:
       "A centralized platform to manage transaction disputes and customer complaints at Fonepay, automating case tracking, resolution workflows, and notifications — reducing dispute resolution time by 30%.",
-    tags: ["FinTech", "Product Management", "Operations"],
+    tags: ["Fintech", "Product Management", "Operations"],
   },
   {
     title: "Alipay+",
     description:
       "A cross-border digital payment integration enabling seamless international transactions, reducing payment friction, and supporting multiple currencies for users and partner institutions across 11+ countries.",
-    tags: ["Cross-Border Payments", "FinTech", "Partnerships"],
+    tags: ["Cross-Border Payments", "Fintech", "Partnerships"],
   },
   {
     title: "Fonepay Circle",
@@ -66,7 +66,7 @@ export const projects = [
     title: "Cashback Management System",
     description:
       "A platform to automate cashback campaigns for new and existing users, covering calculation, approval, tracking, and reporting to boost user engagement and campaign ROI.",
-    tags: ["Product Management", "Growth", "FinTech"],
+    tags: ["Product Management", "Growth", "Fintech"],
   },
   {
     title: "Winner Announcement System",
@@ -88,7 +88,7 @@ export const experience = [
     company: "Macquarie University",
     period: "Jul 2026 — Present",
     bullets: [
-      "Facilitating learning in Project Management and Professional Practice by bridging academic concepts with real-world project management applications.",
+      "Facilitating learning in Project Management and Professional Practice by connecting academic theory with real-world industry practice.",
     ],
   },
   {
@@ -96,9 +96,9 @@ export const experience = [
     company: "Fonepay",
     period: "Feb 2024 — Jul 2025",
     bullets: [
-      "Led end-to-end delivery of multi-market payment initiatives, including Dispute Management System, Alipay+, Fonepay Circle, Winner Announcement, and Cashback Management System, enhancing operational scalability and supporting thousands of daily transactions.",
-      "Optimized workflows across cross-functional teams (product, tech, operations), reducing dispute resolution time by 30% and improving process efficiency.",
-      "Implemented system enhancements and monitoring dashboards for platforms including Alipay+ and Winner Announcement workflows, strengthening transaction oversight and mitigating operational risk.",
+      "Led end-to-end delivery of multi-market payment initiatives, including the Dispute Management System, Alipay+, Fonepay Circle, Winner Announcement System, and Cashback Management System, enhancing operational scalability and supporting thousands of daily transactions.",
+      "Optimized workflows across cross-functional teams (product, tech, and operations), reducing dispute resolution time by 30% and improving process efficiency.",
+      "Implemented system enhancements and monitoring dashboards for platforms including Alipay+ and the Winner Announcement System, strengthening transaction oversight and mitigating operational risk.",
       "Bridged communication between business and technical stakeholders, translating requirements into actionable solutions and improving project delivery speed and quality.",
     ],
   },
@@ -127,7 +127,7 @@ export const experience = [
     company: "iae GLOBAL",
     period: "May 2019 — Dec 2020",
     bullets: [
-      "Partnered with internal teams and external partners to streamline workflows and improve efficiency using CRM and database systems.",
+      "Collaborated with internal teams and external partners to streamline workflows and improve efficiency using CRM and database systems.",
       "Oversaw student applications and documentation, ensuring accuracy, compliance, and timely processing.",
     ],
   },
@@ -136,7 +136,7 @@ export const experience = [
 export const education = [
   {
     school: "Macquarie University",
-    degree: "Masters of Information Systems Management",
+    degree: "Master of Information Systems Management",
   },
   {
     school: "University of Sunderland",
