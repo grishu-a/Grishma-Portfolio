@@ -19,10 +19,10 @@ export default function Navbar() {
     .join("");
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
+    <header className="animate-slide-down sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         <Link href="#top" className="flex items-center gap-2.5">
-          <span className="btn-primary flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold text-accent-foreground">
+          <span className="btn-primary flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold text-accent-foreground transition-transform hover:scale-105">
             {initials}
           </span>
           <span className="font-mono text-sm font-semibold tracking-tight">
@@ -34,7 +34,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-muted transition-colors hover:text-foreground"
+              className="nav-link text-sm text-muted transition-colors hover:text-foreground"
             >
               {link.label}
             </Link>
@@ -43,7 +43,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <Link
             href="#contact"
-            className="btn-primary hidden rounded-full px-4 py-1.5 text-sm font-medium text-accent-foreground transition-opacity hover:opacity-90 sm:inline-block"
+            className="btn-primary hidden rounded-full px-4 py-1.5 text-sm font-medium text-accent-foreground transition-all hover:-translate-y-0.5 hover:opacity-90 sm:inline-block"
           >
             Get in touch
           </Link>

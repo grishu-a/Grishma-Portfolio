@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { profile } from "@/lib/data";
 import { ArrowRightIcon } from "./icons";
+import Reveal from "./Reveal";
 
 const highlights = [
   { value: "3+ yrs", label: "Fintech delivery" },
@@ -16,23 +17,29 @@ export default function Hero() {
         aria-hidden="true"
       />
       <div
-        className="blob -top-10 right-0 h-64 w-64 bg-accent-2"
+        className="blob -top-10 right-0 h-64 w-64 bg-accent-2 [animation-delay:2s]"
         aria-hidden="true"
       />
       <div className="relative mx-auto max-w-5xl px-6 pb-20 pt-16 sm:pt-24">
-        <div className="flex w-fit items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted">
+        <Reveal className="flex w-fit items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted">
           <span className="relative flex h-2 w-2">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
           </span>
           Open to new opportunities
-        </div>
-        <p className="eyebrow mt-6">Hi, I&apos;m {profile.name.split(" ")[0]}</p>
-        <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-6xl">
-          {profile.role}
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg text-muted">{profile.tagline}</p>
-        <div className="mt-8 flex flex-wrap items-center gap-4">
+        </Reveal>
+        <Reveal delay={80}>
+          <p className="eyebrow mt-6">Hi, I&apos;m {profile.name.split(" ")[0]}</p>
+        </Reveal>
+        <Reveal delay={140}>
+          <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-6xl">
+            {profile.role}
+          </h1>
+        </Reveal>
+        <Reveal delay={200}>
+          <p className="mt-6 max-w-2xl text-lg text-muted">{profile.tagline}</p>
+        </Reveal>
+        <Reveal delay={260} className="mt-8 flex flex-wrap items-center gap-4">
           <Link
             href="#projects"
             className="btn-primary group inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-accent-foreground transition-transform hover:-translate-y-0.5"
@@ -46,16 +53,16 @@ export default function Hero() {
           >
             Download résumé
           </Link>
-        </div>
+        </Reveal>
         <dl className="mt-14 grid max-w-xl grid-cols-3 gap-6 border-t border-border pt-8">
-          {highlights.map((item) => (
-            <div key={item.label}>
+          {highlights.map((item, index) => (
+            <Reveal key={item.label} delay={320 + index * 80}>
               <dt className="sr-only">{item.label}</dt>
               <dd className="gradient-text text-2xl font-bold sm:text-3xl">
                 {item.value}
               </dd>
               <p className="mt-1 text-xs text-muted">{item.label}</p>
-            </div>
+            </Reveal>
           ))}
         </dl>
       </div>

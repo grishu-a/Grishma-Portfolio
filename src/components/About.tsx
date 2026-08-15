@@ -1,15 +1,18 @@
 import { profile } from "@/lib/data";
 import { MailIcon, MapPinIcon } from "./icons";
+import Reveal from "./Reveal";
 
 export default function About() {
   return (
     <section id="about" className="mx-auto max-w-5xl px-6 py-16">
-      <h2 className="eyebrow">01 · About</h2>
+      <Reveal>
+        <h2 className="eyebrow">01 · About</h2>
+      </Reveal>
       <div className="mt-6 grid gap-8 sm:grid-cols-3">
-        <p className="text-base leading-relaxed text-muted sm:col-span-2">
-          {profile.bio}
-        </p>
-        <div className="card-surface flex flex-col gap-5 p-5 text-sm">
+        <Reveal delay={80} className="sm:col-span-2">
+          <p className="text-base leading-relaxed text-muted">{profile.bio}</p>
+        </Reveal>
+        <Reveal delay={160} className="card-surface flex flex-col gap-5 p-5 text-sm">
           <div className="flex items-start gap-3">
             <span className="icon-badge h-9 w-9">
               <MapPinIcon className="h-4 w-4" />
@@ -33,7 +36,7 @@ export default function About() {
               </a>
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

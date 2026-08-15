@@ -1,13 +1,20 @@
 import { certifications } from "@/lib/data";
 import { AwardIcon, ExternalLinkIcon } from "./icons";
+import Reveal from "./Reveal";
 
 export default function Certifications() {
   return (
     <section id="certifications" className="mx-auto max-w-5xl px-6 py-16">
-      <h2 className="eyebrow">06 · Certifications</h2>
+      <Reveal>
+        <h2 className="eyebrow">06 · Certifications</h2>
+      </Reveal>
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {certifications.map((cert) => (
-          <div key={cert.title} className="card-surface flex flex-col p-5">
+        {certifications.map((cert, index) => (
+          <Reveal
+            key={cert.title}
+            delay={(index % 3) * 100}
+            className="card-surface flex flex-col p-5"
+          >
             <span className="icon-badge h-10 w-10">
               <AwardIcon className="h-5 w-5" />
             </span>
@@ -30,7 +37,7 @@ export default function Certifications() {
                 <ExternalLinkIcon className="h-3.5 w-3.5" />
               </a>
             )}
-          </div>
+          </Reveal>
         ))}
       </div>
     </section>

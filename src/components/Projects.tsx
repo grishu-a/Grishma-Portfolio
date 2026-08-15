@@ -1,12 +1,19 @@
 import { projects } from "@/lib/data";
+import Reveal from "./Reveal";
 
 export default function Projects() {
   return (
     <section id="projects" className="mx-auto max-w-5xl px-6 py-16">
-      <h2 className="eyebrow">03 · Projects</h2>
+      <Reveal>
+        <h2 className="eyebrow">03 · Projects</h2>
+      </Reveal>
       <div className="mt-6 grid gap-6 sm:grid-cols-2">
         {projects.map((project, index) => (
-          <div key={project.title} className="card-surface flex flex-col p-6">
+          <Reveal
+            key={project.title}
+            delay={(index % 2) * 100}
+            className="card-surface flex flex-col p-6"
+          >
             <span className="icon-badge h-9 w-9 font-mono text-xs font-semibold">
               {String(index + 1).padStart(2, "0")}
             </span>
@@ -22,7 +29,7 @@ export default function Projects() {
                 </span>
               ))}
             </div>
-          </div>
+          </Reveal>
         ))}
       </div>
     </section>

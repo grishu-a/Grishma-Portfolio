@@ -1,6 +1,7 @@
 import type { ComponentType } from "react";
 import { skills } from "@/lib/data";
 import { BankIcon, BriefcaseIcon, WrenchIcon } from "./icons";
+import Reveal from "./Reveal";
 
 const icons: Record<string, ComponentType<{ className?: string }>> = {
   "Product & Delivery": BriefcaseIcon,
@@ -11,12 +12,18 @@ const icons: Record<string, ComponentType<{ className?: string }>> = {
 export default function Skills() {
   return (
     <section id="skills" className="mx-auto max-w-5xl px-6 py-16">
-      <h2 className="eyebrow">02 · Skills</h2>
+      <Reveal>
+        <h2 className="eyebrow">02 · Skills</h2>
+      </Reveal>
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {skills.map((group) => {
+        {skills.map((group, index) => {
           const Icon = icons[group.category] ?? BriefcaseIcon;
           return (
-            <div key={group.category} className="card-surface p-5">
+            <Reveal
+              key={group.category}
+              delay={index * 100}
+              className="card-surface p-5"
+            >
               <span className="icon-badge h-10 w-10">
                 <Icon className="h-5 w-5" />
               </span>
@@ -31,7 +38,7 @@ export default function Skills() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </Reveal>
           );
         })}
       </div>

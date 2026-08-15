@@ -1,13 +1,14 @@
 import Link from "next/link";
 import { profile } from "@/lib/data";
 import { ArrowRightIcon, MailIcon } from "./icons";
+import Reveal from "./Reveal";
 
 export default function Contact() {
   return (
     <section id="contact" className="mx-auto max-w-5xl px-6 py-20">
-      <div className="relative overflow-hidden rounded-3xl border border-border bg-card px-8 py-14 text-center">
+      <Reveal className="relative overflow-hidden rounded-3xl border border-border bg-card px-8 py-14 text-center">
         <div
-          className="blob left-1/2 top-0 h-64 w-64 -translate-x-1/2 -translate-y-1/2 bg-accent"
+          className="blob left-1/2 top-0 h-64 w-64 -translate-x-1/2 -translate-y-1/2 bg-accent [animation-delay:4s]"
           aria-hidden="true"
         />
         <div className="relative">
@@ -36,7 +37,7 @@ export default function Contact() {
             </Link>
           </div>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }
