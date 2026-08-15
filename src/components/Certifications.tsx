@@ -1,4 +1,5 @@
 import { certifications } from "@/lib/data";
+import CompanyLogo from "./CompanyLogo";
 import { AwardIcon, ExternalLinkIcon } from "./icons";
 import Reveal from "./Reveal";
 
@@ -15,9 +16,13 @@ export default function Certifications() {
             delay={(index % 3) * 100}
             className="card-surface flex flex-col p-5"
           >
-            <span className="icon-badge h-10 w-10">
-              <AwardIcon className="h-5 w-5" />
-            </span>
+            {cert.logo ? (
+              <CompanyLogo src={cert.logo} alt={`${cert.issuer} logo`} size={40} />
+            ) : (
+              <span className="icon-badge h-10 w-10">
+                <AwardIcon className="h-5 w-5" />
+              </span>
+            )}
             <h3 className="mt-4 font-semibold leading-snug">{cert.title}</h3>
             <p className="mt-1 text-sm text-muted">{cert.issuer}</p>
             {cert.issued && (

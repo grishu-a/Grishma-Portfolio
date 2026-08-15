@@ -86,6 +86,7 @@ export const experience = [
   {
     role: "Teaching Associate",
     company: "Macquarie University",
+    logo: "/logos/macquarie.png",
     period: "Jul 2026 - Present",
     bullets: [
       "Facilitating learning in Project Management and Professional Practice by connecting academic theory with real-world industry practice.",
@@ -94,6 +95,7 @@ export const experience = [
   {
     role: "Technical Product Coordinator-Lead",
     company: "Fonepay",
+    logo: "/logos/fonepay.jpg",
     period: "Feb 2024 - Jul 2025",
     bullets: [
       "Led end-to-end delivery of multi-market payment initiatives, including the Dispute Management System, Alipay+, Fonepay Circle, Winner Announcement System, and Cashback Management System, enhancing operational scalability and supporting thousands of daily transactions.",
@@ -137,6 +139,7 @@ export const education = [
   {
     school: "Macquarie University",
     degree: "Master of Information Systems Management",
+    logo: "/logos/macquarie.png",
   },
   {
     school: "University of Sunderland",
@@ -171,17 +174,20 @@ export const certifications = [
   {
     title: "Scrum Master Capstone",
     issuer: "Google",
+    logo: "/logos/google.jpg",
     issued: "Sep 2024",
     credentialUrl: "https://coursera.org/share/4257b9db405d76a0af459c7b8fc3e884",
   },
   {
     title: "Project Execution: Running the Project",
     issuer: "Google",
+    logo: "/logos/google.jpg",
     credentialUrl: "https://coursera.org/share/83641d0c1bca507d808f76bca513b9eb",
   },
   {
     title: "Agile Project Management",
     issuer: "Google",
+    logo: "/logos/google.jpg",
     issued: "Jul 2024",
     credentialUrl: "https://www.coursera.org/account/accomplishments/certificate/6WMCTXX2FTCS",
   },
