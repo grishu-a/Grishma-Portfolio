@@ -4,11 +4,12 @@ import Reveal from "./Reveal";
 
 export default function About() {
   return (
-    <section id="about" className="mx-auto max-w-5xl px-6 py-16">
+    <section id="about" className="mx-auto max-w-5xl px-6 py-20 sm:py-24">
       <Reveal>
         <h2 className="eyebrow">01 · About</h2>
+        <h3 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">About Me</h3>
       </Reveal>
-      <div className="mt-6 grid gap-8 sm:grid-cols-3">
+      <div className="mt-8 grid gap-8 sm:grid-cols-3">
         <Reveal delay={80} className="sm:col-span-2">
           <p className="text-base leading-relaxed text-muted">{profile.bio}</p>
         </Reveal>

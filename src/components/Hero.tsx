@@ -8,6 +8,8 @@ const highlights = [
   { value: "11+", label: "Countries supported" },
 ];
 
+const [primaryRole, secondaryRole] = profile.role.split(" | ");
+
 export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden">
@@ -19,7 +21,7 @@ export default function Hero() {
         className="blob -top-10 right-0 h-64 w-64 bg-accent-2 [animation-delay:2s]"
         aria-hidden="true"
       />
-      <div className="relative mx-auto max-w-5xl px-6 pb-20 pt-16 sm:pt-24">
+      <div className="relative mx-auto max-w-5xl px-6 pb-24 pt-20 sm:pt-28">
         <Reveal className="flex w-fit items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted">
           <span className="relative flex h-2 w-2">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
@@ -32,7 +34,13 @@ export default function Hero() {
         </Reveal>
         <Reveal delay={140}>
           <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-6xl">
-            {profile.role}
+            {primaryRole}
+            {secondaryRole && (
+              <>
+                <br />
+                <span className="gradient-text">{secondaryRole}</span>
+              </>
+            )}
           </h1>
         </Reveal>
         <Reveal delay={200}>

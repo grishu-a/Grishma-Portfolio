@@ -3,11 +3,12 @@ import Reveal from "./Reveal";
 
 export default function Projects() {
   return (
-    <section id="projects" className="mx-auto max-w-5xl px-6 py-16">
+    <section id="projects" className="mx-auto max-w-5xl px-6 py-20 sm:py-24">
       <div className="grid gap-10 lg:grid-cols-[280px_1fr] lg:items-start">
         <Reveal className="lg:sticky lg:top-24">
           <h2 className="eyebrow">03 · Projects</h2>
-          <p className="mt-4 text-sm text-muted">
+          <h3 className="mt-3 text-2xl font-bold tracking-tight">Selected Projects</h3>
+          <p className="mt-4 text-sm leading-relaxed text-muted">
             Product and fintech platforms I&apos;ve led end-to-end, from dispute
             resolution to cross-border payments.
           </p>

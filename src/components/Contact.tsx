@@ -5,7 +5,7 @@ import Reveal from "./Reveal";
 
 export default function Contact() {
   return (
-    <section id="contact" className="mx-auto max-w-5xl px-6 py-20">
+    <section id="contact" className="mx-auto max-w-5xl px-6 py-20 sm:py-28">
       <Reveal className="relative overflow-hidden rounded-3xl border border-border bg-card px-8 py-14 text-center">
         <div
           className="blob left-1/2 top-0 h-64 w-64 -translate-x-1/2 -translate-y-1/2 bg-accent [animation-delay:4s]"
