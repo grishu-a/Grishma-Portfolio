@@ -46,6 +46,10 @@ body {
   color: var(--foreground);
 }
 
+#projects {
+  scroll-margin-top: 5rem;
+}
+
 .eyebrow {
   display: inline-flex;
   align-items: center;
