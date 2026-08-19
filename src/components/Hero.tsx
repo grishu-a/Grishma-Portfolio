@@ -4,7 +4,6 @@ import { ArrowRightIcon } from "./icons";
 import Reveal from "./Reveal";
 
 const highlights = [
-  { value: "3+ yrs", label: "Fintech delivery" },
   { value: "30%", label: "Faster dispute resolution" },
   { value: "11+", label: "Countries supported" },
 ];
@@ -54,7 +53,7 @@ export default function Hero() {
             Download résumé
           </Link>
         </Reveal>
-        <dl className="mt-14 grid max-w-xl grid-cols-3 gap-6 border-t border-border pt-8">
+        <dl className="mt-14 grid max-w-xl grid-cols-2 gap-6 border-t border-border pt-8">
           {highlights.map((item, index) => (
             <Reveal key={item.label} delay={320 + index * 80}>
               <dt className="sr-only">{item.label}</dt>

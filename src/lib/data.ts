@@ -1,6 +1,6 @@
 export const profile = {
   name: "Grishma Amatya",
-  role: "Project & Product Manager | Fintech Specialist",
+  role: "Project & Product Management | Fintech Specialist",
   tagline:
     "I turn ambiguous problems into shipped fintech products - from dispute resolution to cross-border payments.",
   bio: "I'm a project and product manager with a focus on fintech, currently bridging academia and industry as a Teaching Associate at Macquarie University. Before that, I led end-to-end delivery of payment products at Fonepay - including the Dispute Management System, Alipay+ cross-border payments, and the Fonepay Circle peer-to-peer network - working across product, tech, and operations to support thousands of daily transactions. I care about clear ownership, cross-functional alignment, and building products that create measurable impact.",
