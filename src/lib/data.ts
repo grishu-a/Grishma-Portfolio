@@ -82,6 +82,7 @@ export const projects = [
     description:
       "A comprehensive HR management platform designed to streamline employee lifecycle processes, including recruitment, onboarding, attendance tracking, leave management, and performance evaluation.",
     tags: ["HRIS", "Development"],
+    image: "/projects/neo-hrm.png",
   },
 ];
 
