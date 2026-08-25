@@ -31,9 +31,9 @@ export default function Projects() {
                     alt=""
                     fill
                     aria-hidden="true"
-                    className="object-cover opacity-[0.12] dark:opacity-[0.18]"
+                    className="object-cover opacity-[0.32] dark:opacity-[0.4]"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/95 to-card/70" />
+                  <div className="absolute inset-0 bg-card/45" />
                 </>
               )}
               <div className="relative flex flex-1 flex-col">
