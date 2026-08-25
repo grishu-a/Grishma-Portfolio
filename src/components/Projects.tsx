@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { projects } from "@/lib/data";
 import Reveal from "./Reveal";
 
@@ -21,26 +22,40 @@ export default function Projects() {
             <Reveal
               key={project.title}
               delay={(index % 2) * 100}
-              className="card-surface flex flex-col p-6"
+              className="card-surface relative flex flex-col overflow-hidden p-6"
             >
-              <span
-                className={`icon-badge h-9 w-9 font-mono text-xs font-semibold ${
-                  ["", "icon-badge-b", "icon-badge-c"][index % 3]
-                }`}
-              >
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <h3 className="mt-4 text-lg font-semibold">{project.title}</h3>
-              <p className="mt-2 flex-1 text-sm text-muted">{project.description}</p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full bg-background px-2.5 py-1 text-xs text-muted"
-                  >
-                    {tag}
-                  </span>
-                ))}
+              {project.image && (
+                <>
+                  <Image
+                    src={project.image}
+                    alt=""
+                    fill
+                    aria-hidden="true"
+                    className="object-cover opacity-[0.12] dark:opacity-[0.18]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/95 to-card/70" />
+                </>
+              )}
+              <div className="relative flex flex-1 flex-col">
+                <span
+                  className={`icon-badge h-9 w-9 font-mono text-xs font-semibold ${
+                    ["", "icon-badge-b", "icon-badge-c"][index % 3]
+                  }`}
+                >
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <h3 className="mt-4 text-lg font-semibold">{project.title}</h3>
+                <p className="mt-2 flex-1 text-sm text-muted">{project.description}</p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full bg-background px-2.5 py-1 text-xs text-muted"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             </Reveal>
           ))}
