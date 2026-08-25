@@ -22,21 +22,20 @@ export default function Projects() {
             <Reveal
               key={project.title}
               delay={(index % 2) * 100}
-              className="card-surface relative flex flex-col overflow-hidden p-6"
+              className="card-surface flex flex-col overflow-hidden"
             >
               {project.image && (
-                <>
+                <div className="relative h-44 w-full sm:h-48">
                   <Image
                     src={project.image}
                     alt=""
                     fill
                     aria-hidden="true"
-                    className="object-cover opacity-[0.32] dark:opacity-[0.4]"
+                    className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-card/45" />
-                </>
+                </div>
               )}
-              <div className="relative flex flex-1 flex-col">
+              <div className="flex flex-1 flex-col p-6">
                 <span
                   className={`icon-badge h-9 w-9 font-mono text-xs font-semibold ${
                     ["", "icon-badge-b", "icon-badge-c"][index % 3]
