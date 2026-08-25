@@ -107,6 +107,7 @@ export const experience = [
   {
     role: "Developer",
     company: "Neosoftware Private Limited",
+    logo: "/logos/neosoftware.png",
     period: "Jun 2022 - Feb 2024",
     bullets: [
       "Developed and enhanced web-based applications by designing scalable solutions aligned with business requirements and user needs.",
@@ -117,6 +118,7 @@ export const experience = [
   {
     role: "CAE Coach",
     company: "Stamford International University",
+    logo: "/logos/stamford.png",
     period: "Mar 2018 - Oct 2018",
     bullets: [
       "Delivered hands-on coaching in Data Structure and Algorithm, Statistics, System Administration, Ethical Hacking, Operating Systems, Networking, Mathematics, and English 101 & 102.",
@@ -134,6 +136,7 @@ export const education = [
   {
     school: "University of Sunderland",
     degree: "Computer Systems Engineering",
+    logo: "/logos/sunderland.png",
   },
 ];
 
