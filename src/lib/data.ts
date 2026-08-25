@@ -60,6 +60,13 @@ export const projects = [
     image: "/projects/dispute.jpeg",
   },
   {
+    title: "NEO HRM",
+    description:
+      "A comprehensive HR management platform designed to streamline employee lifecycle processes, including recruitment, onboarding, attendance tracking, leave management, and performance evaluation.",
+    tags: ["HRIS", "Development"],
+    image: "/projects/neo-hrm.png",
+  },
+  {
     title: "Fonepay Circle",
     description:
       "A digital payment network enabling peer-to-peer and merchant transactions, including instant money transfer, split payments, and payment requests - improving transaction success rates and user adoption.",
@@ -76,13 +83,6 @@ export const projects = [
     description:
       "An automated system for selecting and announcing winners of promotional campaigns, ensuring transparency, accuracy, and timely communication with participants.",
     tags: ["Automation", "Product Management"],
-  },
-  {
-    title: "NEO HRM",
-    description:
-      "A comprehensive HR management platform designed to streamline employee lifecycle processes, including recruitment, onboarding, attendance tracking, leave management, and performance evaluation.",
-    tags: ["HRIS", "Development"],
-    image: "/projects/neo-hrm.png",
   },
 ];
 
