@@ -45,19 +45,19 @@ export const skills = [
 
 export const projects = [
   {
-    title: "Dispute Management System",
-    description:
-      "A centralized platform to manage transaction disputes and customer complaints at Fonepay, automating case tracking, resolution workflows, and notifications - reducing dispute resolution time by 30%.",
-    tags: ["Fintech", "Product Management", "Operations"],
-    image: "/projects/dispute.jpeg",
-  },
-  {
     title: "Alipay+",
     description:
       "A cross-border digital payment integration enabling seamless international transactions, reducing payment friction, and supporting multiple currencies for users and partner institutions across 11+ countries.",
     tags: ["Cross-Border Payments", "Fintech", "Partnerships"],
     image: "/projects/alipay.png",
     imagePosition: "top",
+  },
+  {
+    title: "Dispute Management System",
+    description:
+      "A centralized platform to manage transaction disputes and customer complaints at Fonepay, automating case tracking, resolution workflows, and notifications - reducing dispute resolution time by 30%.",
+    tags: ["Fintech", "Product Management", "Operations"],
+    image: "/projects/dispute.jpeg",
   },
   {
     title: "Fonepay Circle",
