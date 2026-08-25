@@ -23,11 +23,12 @@ export default function Certifications() {
               {cert.logo ? (
                 <CompanyLogo src={cert.logo} alt={`${cert.issuer} logo`} size={40} />
               ) : (
-                <span className="icon-badge h-10 w-10">
+                <span
+                  className={`icon-badge h-10 w-10 ${["", "icon-badge-b", "icon-badge-c"][index % 3]}`}
+                >
                   <AwardIcon className="h-5 w-5" />
                 </span>
               )}
-              {cert.expired && <span className="pill-expired">Expired</span>}
             </div>
             <h3 className="mt-4 font-semibold leading-snug">{cert.title}</h3>
             <p className="mt-1 text-sm text-muted">{cert.issuer}</p>

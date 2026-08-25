@@ -21,6 +21,10 @@ export default function Hero() {
         className="blob -top-10 right-0 h-64 w-64 bg-accent-2 [animation-delay:2s]"
         aria-hidden="true"
       />
+      <div
+        className="blob top-32 left-1/3 h-56 w-56 bg-accent-3 [animation-delay:5s]"
+        aria-hidden="true"
+      />
       <div className="relative mx-auto max-w-5xl px-6 pb-24 pt-20 sm:pt-28">
         <Reveal className="flex w-fit items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted">
           <span className="relative flex h-2 w-2">

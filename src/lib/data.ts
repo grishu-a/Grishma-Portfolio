@@ -168,7 +168,6 @@ export const certifications = [
     title: "Registered Product Owner™",
     issuer: "Agile Education by Scrum Inc.™",
     issued: "Oct 2024",
-    expired: "Oct 2025",
     credentialUrl: "https://s3.amazonaws.com/scruminc-certs/RPO-4516817",
   },
   {

@@ -21,13 +21,14 @@ export default function Skills() {
       <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {skills.map((group, index) => {
           const Icon = icons[group.category] ?? BriefcaseIcon;
+          const badgeVariant = ["", "icon-badge-b", "icon-badge-c"][index % 3];
           return (
             <Reveal
               key={group.category}
               delay={index * 100}
               className="card-surface p-5"
             >
-              <span className="icon-badge h-10 w-10">
+              <span className={`icon-badge h-10 w-10 ${badgeVariant}`}>
                 <Icon className="h-5 w-5" />
               </span>
               <h3 className="mt-4 text-sm font-semibold">{group.category}</h3>

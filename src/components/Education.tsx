@@ -20,7 +20,9 @@ export default function Education() {
             {item.logo ? (
               <CompanyLogo src={item.logo} alt={`${item.school} logo`} size={40} />
             ) : (
-              <span className="icon-badge h-10 w-10">
+              <span
+                className={`icon-badge h-10 w-10 ${index % 2 === 1 ? "icon-badge-c" : ""}`}
+              >
                 <GraduationCapIcon className="h-5 w-5" />
               </span>
             )}

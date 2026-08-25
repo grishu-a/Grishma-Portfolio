@@ -17,6 +17,10 @@ export default function Contact() {
           className="blob left-1/2 top-0 h-64 w-64 -translate-x-1/2 -translate-y-1/2 bg-accent [animation-delay:4s]"
           aria-hidden="true"
         />
+        <div
+          className="blob bottom-0 right-1/4 h-48 w-48 translate-y-1/2 bg-accent-3 [animation-delay:1s]"
+          aria-hidden="true"
+        />
         <div className="relative">
           <h2 className="eyebrow justify-center">07 · Contact</h2>
           <h3 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">

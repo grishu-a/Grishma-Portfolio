@@ -23,7 +23,11 @@ export default function Projects() {
               delay={(index % 2) * 100}
               className="card-surface flex flex-col p-6"
             >
-              <span className="icon-badge h-9 w-9 font-mono text-xs font-semibold">
+              <span
+                className={`icon-badge h-9 w-9 font-mono text-xs font-semibold ${
+                  ["", "icon-badge-b", "icon-badge-c"][index % 3]
+                }`}
+              >
                 {String(index + 1).padStart(2, "0")}
               </span>
               <h3 className="mt-4 text-lg font-semibold">{project.title}</h3>
