@@ -114,25 +114,6 @@ export const experience = [
       "Collaborated with cross-functional teams in Agile environments to analyse requirements, troubleshoot issues, and deliver successful software solutions.",
     ],
   },
-  {
-    role: "Admission Associate",
-    company: "ISMT College",
-    period: "Jan 2021 - Jun 2022",
-    bullets: [
-      "Managed student enquiries and applications via CRM, improving processing efficiency by 20%.",
-      "Maintained accurate records and ensured compliance, strengthening data integrity and operational reliability.",
-      "Collaborated with academic and administrative teams to streamline processes and reduce response times.",
-    ],
-  },
-  {
-    role: "Counselor and Writer",
-    company: "iae GLOBAL",
-    period: "May 2019 - Dec 2020",
-    bullets: [
-      "Collaborated with internal teams and external partners to streamline workflows and improve efficiency using CRM and database systems.",
-      "Oversaw student applications and documentation, ensuring accuracy, compliance, and timely processing.",
-    ],
-  },
 ];
 
 export const education = [
