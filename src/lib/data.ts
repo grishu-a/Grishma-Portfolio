@@ -114,6 +114,15 @@ export const experience = [
       "Collaborated with cross-functional teams in Agile environments to analyse requirements, troubleshoot issues, and deliver successful software solutions.",
     ],
   },
+  {
+    role: "CAE Coach",
+    company: "Stamford International University",
+    period: "Mar 2018 - Oct 2018",
+    bullets: [
+      "Delivered hands-on coaching in Data Structure and Algorithm, Statistics, System Administration, Ethical Hacking, Operating Systems, Networking, Mathematics, and English 101 & 102.",
+      "Designed interactive sessions to strengthen analytical thinking, system understanding, and problem-solving skills.",
+    ],
+  },
 ];
 
 export const education = [
