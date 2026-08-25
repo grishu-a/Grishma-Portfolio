@@ -57,6 +57,7 @@ export const projects = [
       "A cross-border digital payment integration enabling seamless international transactions, reducing payment friction, and supporting multiple currencies for users and partner institutions across 11+ countries.",
     tags: ["Cross-Border Payments", "Fintech", "Partnerships"],
     image: "/projects/alipay.png",
+    imagePosition: "top",
   },
   {
     title: "Fonepay Circle",

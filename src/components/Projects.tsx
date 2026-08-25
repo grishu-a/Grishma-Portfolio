@@ -31,7 +31,9 @@ export default function Projects() {
                     alt=""
                     fill
                     aria-hidden="true"
-                    className="object-cover"
+                    className={`object-cover ${
+                      project.imagePosition === "top" ? "object-top" : ""
+                    }`}
                   />
                 </div>
               )}
