@@ -144,6 +144,7 @@ export const certifications = [
   {
     title: "Product Owner Roles, Scrum & Beyond",
     issuer: "F1Soft International Pvt. Ltd.",
+    logo: "/logos/f1soft.png",
     issued: "Mar 2025",
   },
   {
@@ -155,11 +156,13 @@ export const certifications = [
   {
     title: "Mastering Software Architecture",
     issuer: "Nepal Mentor",
+    logo: "/logos/nepal-mentor.png",
     issued: "Apr 2025",
   },
   {
     title: "Registered Product Owner™",
     issuer: "Agile Education by Scrum Inc.™",
+    logo: "/logos/agile-education.png",
     issued: "Oct 2024",
     credentialUrl: "https://s3.amazonaws.com/scruminc-certs/RPO-4516817",
   },
@@ -186,6 +189,7 @@ export const certifications = [
   {
     title: "Social Media Marketing",
     issuer: "Hootsuite",
+    logo: "/logos/hootsuite.png",
     issued: "Jun 2026",
   },
 ];
