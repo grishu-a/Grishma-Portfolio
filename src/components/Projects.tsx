@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { projects } from "@/lib/data";
+import { ArrowRightIcon } from "./icons";
 import ProjectImage from "./ProjectImage";
 import Reveal from "./Reveal";
 
@@ -82,6 +84,15 @@ export default function Projects() {
                 {project.description}
               </p>
               <Tags tags={project.tags} />
+              {project.caseStudy && (
+                <Link
+                  href={project.caseStudy}
+                  className="btn-primary group mt-6 inline-flex w-fit items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-accent-foreground transition-transform hover:-translate-y-0.5"
+                >
+                  Read case study
+                  <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                </Link>
+              )}
             </div>
           </Reveal>
         ))}

@@ -96,6 +96,7 @@ export const projects = [
     description:
       "Every customer and merchant dispute was handled manually, creating heavy effort for the operations team. I led delivery of a centralised platform that introduced automation for case tracking, resolution workflows and notifications, so teams could resolve disputes faster with far less manual work.",
     tags: ["Fintech", "Product Management", "Operations", "Automation"],
+    caseStudy: "/case-studies/dispute-management",
     image: "/projects/dispute.jpeg",
   },
   {
