@@ -158,7 +158,7 @@ export const experience = [
     role: "Teaching Academic",
     company: "Macquarie University",
     logo: "/logos/macquarie.png",
-    period: "Jul 2026 - Present",
+    period: "Jul 2026 – present",
     bullets: [
       "Facilitating learning in Project Management and Professional Practice by connecting academic theory with real-world industry practice.",
     ],
@@ -167,7 +167,7 @@ export const experience = [
     role: "Technical Product Coordinator-Lead",
     company: "Fonepay",
     logo: "/logos/fonepay.jpg",
-    period: "Feb 2024 - Jul 2025",
+    period: "Feb 2024 – Jul 2025",
     bullets: [
       "Led multi-market payment initiatives from initiation to deployment, including the Dispute Management System, Alipay+, Fonepay Circle, Winner Announcement System, and Cashback Management System, enhancing operational scalability and supporting thousands of daily transactions.",
       "Optimised workflows across cross-functional teams (product, tech, and operations), reducing dispute resolution time by 30% and improving process efficiency.",
@@ -179,7 +179,7 @@ export const experience = [
     role: "Developer",
     company: "Neosoftware Private Limited",
     logo: "/logos/neosoftware.png",
-    period: "Jun 2022 - Feb 2024",
+    period: "Jun 2022 – Feb 2024",
     bullets: [
       "Developed and enhanced web-based applications, including the NEO HRM platform, designing scalable solutions aligned with business requirements and user needs.",
       "Built and integrated backend services, APIs, and database solutions to improve system functionality, data management, and application performance.",
@@ -190,7 +190,7 @@ export const experience = [
     role: "CAE Coach",
     company: "Stamford International University",
     logo: "/logos/stamford.png",
-    period: "Mar 2018 - Oct 2018",
+    period: "Mar 2018 – Oct 2018",
     bullets: [
       "Coached university students in core computing subjects - data structures and algorithms, operating systems, networking and statistics - through interactive, problem-solving sessions.",
     ],
