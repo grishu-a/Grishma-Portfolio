@@ -49,8 +49,8 @@ body {
   color: var(--foreground);
 }
 
-#projects {
-  scroll-margin-top: 5rem;
+main section[id] {
+  scroll-margin-top: 4rem;
 }
 
 .eyebrow {
@@ -112,6 +112,61 @@ body {
   box-shadow: 0 12px 24px -12px color-mix(in srgb, var(--accent) 60%, transparent);
 }
 
+/* Alternating tinted section background */
+.band {
+  background: color-mix(in srgb, var(--accent) 4%, var(--background));
+  border-block: 1px solid var(--border);
+}
+
+.band .card-surface {
+  background: var(--background);
+}
+
+/* Hero phone stack */
+.hero-phone {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  aspect-ratio: 440 / 900;
+  overflow: hidden;
+  border-radius: 1.75rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 30px 60px -25px rgb(15 23 42 / 0.45);
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.hero-phone-left {
+  transform: translate(-100%, -46%) rotate(-8deg);
+}
+
+.hero-phone-right {
+  transform: translate(0%, -46%) rotate(8deg);
+}
+
+.hero-phone-front {
+  z-index: 2;
+  width: 220px;
+  transform: translate(-50%, -50%);
+}
+
+.hero-visual:hover .hero-phone-left {
+  transform: translate(-106%, -47%) rotate(-11deg);
+}
+
+.hero-visual:hover .hero-phone-right {
+  transform: translate(6%, -47%) rotate(11deg);
+}
+
+.hero-visual:hover .hero-phone-front {
+  transform: translate(-50%, -53%);
+}
+
+.scroll-progress {
+  transform-origin: left;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3));
+}
+
 .blob {
   position: absolute;
   border-radius: 9999px;
@@ -149,7 +204,8 @@ body {
   transition: right 0.25s ease;
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link.is-active::after {
   right: 0;
 }
 
@@ -186,6 +242,10 @@ body {
   .reveal {
     opacity: 1 !important;
     transform: none !important;
+    transition: none !important;
+  }
+
+  .hero-phone {
     transition: none !important;
   }
 

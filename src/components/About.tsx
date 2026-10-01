@@ -1,6 +1,8 @@
-import { profile } from "@/lib/data";
+import { profile, recommendations } from "@/lib/data";
 import { MailIcon, MapPinIcon } from "./icons";
 import Reveal from "./Reveal";
+
+const featuredQuote = recommendations[0];
 
 export default function About() {
   return (
@@ -12,8 +14,20 @@ export default function About() {
       <div className="mt-8 grid gap-8 sm:grid-cols-3">
         <Reveal delay={80} className="sm:col-span-2">
           <p className="text-base leading-relaxed text-muted">{profile.bio}</p>
+          <figure className="mt-8 border-l-2 border-accent pl-5">
+            <blockquote className="text-lg font-medium leading-snug">
+              &ldquo;A rare blend of sharp analytical skills and strong managerial
+              oversight, making her an outstanding professional.&rdquo;
+            </blockquote>
+            <figcaption className="mt-2 text-xs text-muted">
+              {featuredQuote.name} · {featuredQuote.title} ·{" "}
+              <a href="#recommendations" className="text-accent hover:underline">
+                Read recommendations
+              </a>
+            </figcaption>
+          </figure>
         </Reveal>
-        <Reveal delay={160} className="card-surface flex flex-col gap-5 p-5 text-sm">
+        <Reveal delay={160} className="card-surface flex flex-col gap-5 self-start p-5 text-sm">
           <div className="flex items-start gap-3">
             <span className="icon-badge h-9 w-9">
               <MapPinIcon className="h-4 w-4" />

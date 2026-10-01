@@ -16,13 +16,21 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         <Hero />
-        <About />
+        <div className="band">
+          <About />
+        </div>
         <Skills />
-        <Projects />
+        <div className="band">
+          <Projects />
+        </div>
         <Experience />
-        <Recommendations />
+        <div className="band">
+          <Recommendations />
+        </div>
         <Education />
-        <Certifications />
+        <div className="band">
+          <Certifications />
+        </div>
         <Contact />
       </main>
       <Footer />

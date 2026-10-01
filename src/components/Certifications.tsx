@@ -12,44 +12,50 @@ export default function Certifications() {
           Certifications
         </h3>
       </Reveal>
-      <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {certifications.map((cert, index) => (
-          <Reveal
-            key={cert.title}
-            delay={(index % 3) * 100}
-            className="card-surface flex flex-col p-5"
-          >
-            <div className="flex items-start justify-between gap-3">
+      <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {certifications.map((cert, index) => {
+          const content = (
+            <>
               {cert.logo ? (
-                <CompanyLogo src={cert.logo} alt={`${cert.issuer} logo`} size={40} />
+                <CompanyLogo src={cert.logo} alt="" size={36} />
               ) : (
                 <span
-                  className={`icon-badge h-10 w-10 ${["", "icon-badge-b", "icon-badge-c"][index % 3]}`}
+                  className={`icon-badge h-9 w-9 ${["", "icon-badge-b", "icon-badge-c"][index % 3]}`}
                 >
-                  <AwardIcon className="h-5 w-5" />
+                  <AwardIcon className="h-4 w-4" />
                 </span>
               )}
-            </div>
-            <h3 className="mt-4 font-semibold leading-snug">{cert.title}</h3>
-            <p className="mt-1 text-sm text-muted">{cert.issuer}</p>
-            {cert.issued && (
-              <p className="mt-3 font-mono text-xs text-muted">
-                Issued {cert.issued}
-              </p>
-            )}
-            {cert.credentialUrl && (
-              <a
-                href={cert.credentialUrl}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline"
-              >
-                View credential
-                <ExternalLinkIcon className="h-3.5 w-3.5" />
-              </a>
-            )}
-          </Reveal>
-        ))}
+              <div className="min-w-0 flex-1">
+                <p className="text-sm font-semibold leading-snug">{cert.title}</p>
+                <p className="mt-0.5 text-xs text-muted">
+                  {cert.issuer}
+                  {cert.issued && ` · ${cert.issued}`}
+                </p>
+              </div>
+              {cert.credentialUrl && (
+                <ExternalLinkIcon className="h-3.5 w-3.5 shrink-0 text-muted transition-colors group-hover:text-accent" />
+              )}
+            </>
+          );
+
+          return (
+            <Reveal key={cert.title} delay={(index % 3) * 80}>
+              {cert.credentialUrl ? (
+                <a
+                  href={cert.credentialUrl}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label={`${cert.title} - view credential`}
+                  className="card-surface group flex h-full items-center gap-3 p-4"
+                >
+                  {content}
+                </a>
+              ) : (
+                <div className="card-surface flex h-full items-center gap-3 p-4">{content}</div>
+              )}
+            </Reveal>
+          );
+        })}
       </div>
     </section>
   );

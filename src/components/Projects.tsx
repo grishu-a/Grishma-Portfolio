@@ -2,66 +2,133 @@ import { projects } from "@/lib/data";
 import ProjectImage from "./ProjectImage";
 import Reveal from "./Reveal";
 
+const FEATURED_COUNT = 3;
+const badgeVariants = ["", "icon-badge-b", "icon-badge-c"];
+
+function Tags({ tags }: { tags: string[] }) {
+  return (
+    <div className="mt-4 flex flex-wrap gap-2">
+      {tags.map((tag) => (
+        <span
+          key={tag}
+          className="rounded-full border border-border px-2.5 py-1 text-xs text-muted"
+        >
+          {tag}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 export default function Projects() {
+  const featured = projects.slice(0, FEATURED_COUNT);
+  const more = projects.slice(FEATURED_COUNT);
+
   return (
     <section id="projects" className="mx-auto max-w-5xl px-6 py-20 sm:py-24">
-      <div className="grid gap-10 lg:grid-cols-[280px_1fr] lg:items-start">
-        <Reveal className="lg:sticky lg:top-24">
+      <Reveal className="flex flex-wrap items-end justify-between gap-4">
+        <div>
           <h2 className="eyebrow">03 · Projects</h2>
-          <h3 className="mt-3 text-2xl font-bold tracking-tight">Selected Projects</h3>
-          <p className="mt-4 text-sm leading-relaxed text-muted">
-            Product and fintech platforms I&apos;ve led end-to-end, from dispute
-            resolution to cross-border payments.
+          <h3 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
+            Selected Projects
+          </h3>
+          <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted">
+            Product and fintech platforms I&apos;ve led from initiation to deployment,
+            from dispute resolution to cross-border payments.
           </p>
-          <p className="mt-6 font-mono text-xs text-muted">
-            {String(projects.length).padStart(2, "0")} projects
-          </p>
-        </Reveal>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
-          {projects.map((project, index) => (
-            <Reveal
-              key={project.title}
-              delay={(index % 2) * 100}
-              className="card-surface flex flex-col overflow-hidden"
-            >
-              {project.image && (
+        </div>
+        <p className="font-mono text-xs text-muted">
+          {String(projects.length).padStart(2, "0")} projects
+        </p>
+      </Reveal>
+
+      <div className="mt-10 space-y-8">
+        {featured.map((project, index) => (
+          <Reveal
+            key={project.title}
+            className={`card-surface flex flex-col overflow-hidden lg:flex-row ${
+              index % 2 === 1 ? "lg:flex-row-reverse" : ""
+            }`}
+          >
+            {project.image && (
+              <div className="lg:w-[46%] lg:shrink-0">
                 <ProjectImage
                   src={project.image}
                   title={project.title}
                   position={project.imagePosition}
+                  className="h-56 sm:h-64 lg:h-full lg:min-h-[320px]"
                 />
-              )}
-              <div className="flex flex-1 flex-col p-6">
+              </div>
+            )}
+            <div className="flex flex-1 flex-col p-6 sm:p-8">
+              <div className="flex items-center gap-3">
                 <span
-                  className={`icon-badge h-9 w-9 font-mono text-xs font-semibold ${
-                    ["", "icon-badge-b", "icon-badge-c"][index % 3]
-                  }`}
+                  className={`icon-badge h-9 w-9 font-mono text-xs font-semibold ${badgeVariants[index % 3]}`}
                 >
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <h3 className="mt-4 text-lg font-semibold">{project.title}</h3>
-                {project.role && (
-                  <p className="mt-1 font-mono text-xs text-muted">{project.role}</p>
-                )}
-                {project.impact && (
-                  <p className="gradient-text mt-3 text-base font-bold">{project.impact}</p>
-                )}
-                <p className="mt-2 flex-1 text-sm text-muted">{project.description}</p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-full bg-background px-2.5 py-1 text-xs text-muted"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+                <span className="font-mono text-xs uppercase tracking-wider text-muted">
+                  Featured
+                </span>
               </div>
-            </Reveal>
-          ))}
-        </div>
+              <h3 className="mt-4 text-2xl font-bold tracking-tight">{project.title}</h3>
+              {project.role && (
+                <p className="mt-1 font-mono text-xs text-muted">{project.role}</p>
+              )}
+              {project.impact && (
+                <p className="gradient-text mt-4 text-xl font-bold">{project.impact}</p>
+              )}
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
+                {project.description}
+              </p>
+              <Tags tags={project.tags} />
+            </div>
+          </Reveal>
+        ))}
       </div>
+
+      {more.length > 0 && (
+        <>
+          <Reveal>
+            <h4 className="mt-14 font-mono text-xs uppercase tracking-widest text-muted">
+              More projects
+            </h4>
+          </Reveal>
+          <div className="mt-5 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {more.map((project, index) => (
+              <Reveal
+                key={project.title}
+                delay={index * 100}
+                className="card-surface flex flex-col overflow-hidden"
+              >
+                {project.image && (
+                  <ProjectImage
+                    src={project.image}
+                    title={project.title}
+                    position={project.imagePosition}
+                    className="h-32"
+                  />
+                )}
+                <div className="flex flex-1 flex-col p-5">
+                  <span
+                    className={`icon-badge h-8 w-8 font-mono text-[11px] font-semibold ${
+                      badgeVariants[(index + FEATURED_COUNT) % 3]
+                    }`}
+                  >
+                    {String(index + FEATURED_COUNT + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="mt-3 font-semibold">{project.title}</h3>
+                  {project.role && (
+                    <p className="mt-1 font-mono text-[11px] text-muted">{project.role}</p>
+                  )}
+                  <p className="mt-2 flex-1 text-sm text-muted">{project.description}</p>
+                  <Tags tags={project.tags} />
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </>
+      )}
     </section>
   );
 }

@@ -7,10 +7,12 @@ export default function ProjectImage({
   src,
   title,
   position,
+  className = "h-44 sm:h-48",
 }: {
   src: string;
   title: string;
   position?: string;
+  className?: string;
 }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
 
@@ -19,7 +21,7 @@ export default function ProjectImage({
       <button
         type="button"
         onClick={() => dialogRef.current?.showModal()}
-        className="group relative block h-44 w-full cursor-zoom-in overflow-hidden sm:h-48"
+        className={`group relative block w-full cursor-zoom-in overflow-hidden ${className}`}
         aria-label={`View full image for ${title}`}
       >
         <Image

@@ -1,6 +1,32 @@
-import { experience } from "@/lib/data";
+import type { ReactNode } from "react";
+import { experience, projects } from "@/lib/data";
 import CompanyLogo from "./CompanyLogo";
 import Reveal from "./Reveal";
+
+// Bold metrics and project names so skimmers catch the key facts.
+const escapeRegExp = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+const highlightPattern = new RegExp(
+  `(\\d+(?:\\.\\d+)?(?:%|M\\+|\\+)|${projects
+    .map((project) => escapeRegExp(project.title))
+    .join("|")})`,
+);
+
+function highlight(text: string): ReactNode[] {
+  return text
+    .split(highlightPattern)
+    .map((part, i) =>
+      i % 2 === 1 ? (
+        <strong key={i} className="font-semibold text-foreground">
+          {part}
+        </strong>
+      ) : (
+        part
+      ),
+    );
+}
+
+const FULL_DETAIL_ROLES = 2;
 
 export default function Experience() {
   return (
@@ -28,11 +54,27 @@ export default function Experience() {
               </div>
               <span className="font-mono text-xs text-muted">{job.period}</span>
             </div>
-            <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-muted">
-              {job.bullets.map((bullet) => (
-                <li key={bullet}>{bullet}</li>
-              ))}
-            </ul>
+            {index < FULL_DETAIL_ROLES || job.bullets.length === 1 ? (
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-muted">
+                {job.bullets.map((bullet) => (
+                  <li key={bullet}>{highlight(bullet)}</li>
+                ))}
+              </ul>
+            ) : (
+              <details className="group mt-2 text-sm text-muted">
+                <summary className="cursor-pointer list-none pl-5">
+                  {highlight(job.bullets[0])}{" "}
+                  {job.bullets.length > 1 && (
+                    <span className="font-medium text-accent group-open:hidden">Show more</span>
+                  )}
+                </summary>
+                <ul className="mt-2 list-disc space-y-1 pl-5">
+                  {job.bullets.slice(1).map((bullet) => (
+                    <li key={bullet}>{highlight(bullet)}</li>
+                  ))}
+                </ul>
+              </details>
+            )}
           </Reveal>
         ))}
       </div>

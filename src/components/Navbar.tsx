@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import { profile } from "@/lib/data";
@@ -19,6 +19,47 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [active, setActive] = useState("");
+  const progressRef = useRef<HTMLDivElement>(null);
+
+  // Scroll progress bar, updated directly to avoid re-rendering on every scroll event.
+  useEffect(() => {
+    let frame = 0;
+    const update = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const ratio = max > 0 ? window.scrollY / max : 0;
+      if (progressRef.current) progressRef.current.style.transform = `scaleX(${ratio})`;
+    };
+    const onScroll = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, []);
+
+  // Highlight the nav link for the section in the middle of the viewport.
+  useEffect(() => {
+    const sections = links
+      .map((link) => document.querySelector<HTMLElement>(link.href))
+      .filter((section): section is HTMLElement => section !== null);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) setActive(`#${entry.target.id}`);
+        }
+      },
+      { rootMargin: "-45% 0px -50% 0px" },
+    );
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
 
   const initials = profile.name
     .split(" ")
@@ -46,7 +87,10 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="nav-link text-sm text-muted transition-colors hover:text-foreground"
+              aria-current={active === link.href ? "true" : undefined}
+              className={`nav-link text-sm transition-colors hover:text-foreground ${
+                active === link.href ? "is-active text-foreground" : "text-muted"
+              }`}
             >
               {link.label}
             </Link>
@@ -70,6 +114,12 @@ export default function Navbar() {
           </button>
         </div>
       </nav>
+      <div
+        ref={progressRef}
+        className="scroll-progress absolute inset-x-0 bottom-0 h-0.5"
+        style={{ transform: "scaleX(0)" }}
+        aria-hidden="true"
+      />
       <div
         className={`overflow-hidden border-t border-border transition-[max-height,opacity] duration-300 ease-in-out xl:hidden ${
           open ? "max-h-[32rem] opacity-100" : "max-h-0 opacity-0"
