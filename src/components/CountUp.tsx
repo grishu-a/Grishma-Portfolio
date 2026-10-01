@@ -4,13 +4,10 @@ import { useEffect, useRef, useState } from "react";
 
 // Animates the numeric part of a stat like "20M+", "1.7M+" or "30%" when it scrolls into view.
 export default function CountUp({ value, duration = 1400 }: { value: string; duration?: number }) {
-  const match = value.match(/^([\d,.]+)(.*)$/);
-  const target = match ? parseFloat(match[1].replace(/,/g, "")) : 0;
+  const match = value.match(/^([\d.]+)(.*)$/);
+  const target = match ? parseFloat(match[1]) : 0;
   const suffix = match ? match[2] : "";
   const decimals = match?.[1].includes(".") ? match[1].split(".")[1].length : 0;
-  const grouped = match?.[1].includes(",") ?? false;
-  const format = (n: number) =>
-    grouped ? Math.round(n).toLocaleString("en-US") : n.toFixed(decimals);
 
   const ref = useRef<HTMLSpanElement>(null);
   const [display, setDisplay] = useState(value);
@@ -29,10 +26,10 @@ export default function CountUp({ value, duration = 1400 }: { value: string; dur
         const tick = (now: number) => {
           const progress = Math.min((now - start) / duration, 1);
           const eased = 1 - Math.pow(1 - progress, 3);
-          setDisplay(`${format(target * eased)}${suffix}`);
+          setDisplay(`${(target * eased).toFixed(decimals)}${suffix}`);
           if (progress < 1) frame = requestAnimationFrame(tick);
         };
-        setDisplay(`${format(0)}${suffix}`);
+        setDisplay(`${(0).toFixed(decimals)}${suffix}`);
         frame = requestAnimationFrame(tick);
       },
       { threshold: 0.5 },
