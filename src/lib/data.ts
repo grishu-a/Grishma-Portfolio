@@ -134,12 +134,26 @@ export const projects = [
   },
 ];
 
+// Qualities named in the recommendations below, in their own words.
+export const recommendationQualities = [
+  "Creativity",
+  "Analytical skills",
+  "Managerial oversight",
+  "Ownership",
+  "Teamwork",
+  "Quality results",
+];
+
 export const recommendations = [
   {
     name: "Sweta Kapali Shrestha",
     title: "Ex-Head of PM, Fonepay",
+    currentRole: "Now Senior Project Manager, Wealthlane Financial",
     relationship: "Managed Grishma directly",
     source: "LinkedIn recommendation",
+    date: "Feb 2026",
+    headline: "Creativity and infectious enthusiasm",
+    highlights: ["sharp analytical skills", "strong managerial oversight", "outstanding professional"],
     quote:
       "She consistently impressed me with her creativity and infectious enthusiasm. She possesses a rare blend of sharp analytical skills and strong managerial oversight, making her an outstanding professional. Grishma will undoubtedly add significant value to any organization she joins.",
   },
@@ -148,6 +162,13 @@ export const recommendations = [
     title: "Sr. Business Analyst & Product Owner",
     relationship: "Worked on the same team at Fonepay",
     source: "LinkedIn recommendation",
+    date: "Feb 2026",
+    headline: "Took ownership of key deliverables",
+    highlights: [
+      "strong grasp of product workflows",
+      "Dispute Management and Fonepay Circle",
+      "deliver quality results",
+    ],
     quote:
       "She has a strong grasp of product workflows and took ownership of key deliverables, including Dispute Management and Fonepay Circle, one of Fonepay's prominent features. Her professionalism, teamwork, and ability to deliver quality results make her a valuable asset to any organization.",
   },
