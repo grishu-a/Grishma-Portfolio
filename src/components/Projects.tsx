@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { projects } from "@/lib/data";
+import ProjectImage from "./ProjectImage";
 import Reveal from "./Reveal";
 
 export default function Projects() {
@@ -25,17 +25,11 @@ export default function Projects() {
               className="card-surface flex flex-col overflow-hidden"
             >
               {project.image && (
-                <div className="relative h-44 w-full sm:h-48">
-                  <Image
-                    src={project.image}
-                    alt=""
-                    fill
-                    aria-hidden="true"
-                    className={`object-cover ${
-                      project.imagePosition === "top" ? "object-top" : ""
-                    }`}
-                  />
-                </div>
+                <ProjectImage
+                  src={project.image}
+                  title={project.title}
+                  position={project.imagePosition}
+                />
               )}
               <div className="flex flex-1 flex-col p-6">
                 <span

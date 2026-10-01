@@ -4,8 +4,10 @@ import { ArrowRightIcon } from "./icons";
 import Reveal from "./Reveal";
 
 const highlights = [
+  { value: "20M+", label: "Customers on the Fonepay network" },
+  { value: "1.7M+", label: "Merchants reached via Alipay+" },
+  { value: "11+", label: "Countries connected" },
   { value: "30%", label: "Faster dispute resolution" },
-  { value: "11+", label: "Countries supported" },
 ];
 
 const [primaryRole, secondaryRole] = profile.role.split(" | ");
@@ -65,7 +67,7 @@ export default function Hero() {
             Download résumé
           </Link>
         </Reveal>
-        <dl className="mt-14 grid max-w-xl grid-cols-2 gap-6 border-t border-border pt-8">
+        <dl className="mt-14 grid max-w-3xl grid-cols-2 gap-6 sm:grid-cols-4 border-t border-border pt-8">
           {highlights.map((item, index) => (
             <Reveal key={item.label} delay={320 + index * 80}>
               <dt className="sr-only">{item.label}</dt>

@@ -2,8 +2,8 @@ export const profile = {
   name: "Grishma Amatya",
   role: "Project & Product Management | Fintech Specialist",
   tagline:
-    "I turn ambiguous problems into shipped fintech products - from dispute resolution to cross-border payments.",
-  bio: "I'm a project and product manager with a focus on fintech, currently bridging academia and industry as a Teaching Associate at Macquarie University. Before that, I led end-to-end delivery of payment products at Fonepay - including the Dispute Management System, Alipay+ cross-border payments, and the Fonepay Circle peer-to-peer network - working across product, tech, and operations to support thousands of daily transactions. I care about clear ownership, cross-functional alignment, and building products that create measurable impact.",
+    "I ship fintech products at national scale. At Fonepay, Nepal's leading payment network, I led products built for 20M+ customers and 1.7M+ merchants - from bringing Alipay+ cross-border payments to Nepal to cutting dispute resolution time by 30%.",
+  bio: "I'm a project and product manager with a focus on fintech, currently bridging academia and industry as a Teaching Associate at Macquarie University. Before that, I led end-to-end delivery of payment products at Fonepay - including the Dispute Management System, Alipay+ cross-border payments, and the Fonepay Circle peer-to-peer network - working across product, tech, and operations to support thousands of daily transactions. I care about clear ownership, cross-functional alignment, and building products that create real, measurable impact in people's everyday lives.",
   location: "Sydney, NSW, Australia",
   email: "amatya650@gmail.com",
   resumeUrl: "/resume.pdf",
@@ -47,9 +47,17 @@ export const projects = [
   {
     title: "Alipay+",
     description:
-      "A cross-border digital payment integration enabling seamless international transactions, reducing payment friction, and supporting multiple currencies for users and partner institutions across 11+ countries.",
+      "A cross-border digital payment integration enabling seamless international transactions, reducing payment friction, and supporting multiple currencies for users and partner institutions across 11+ countries - accepted at 1.7M+ Fonepay QR merchants nationwide.",
     tags: ["Cross-Border Payments", "Fintech", "Partnerships"],
     image: "/projects/alipay.png",
+    imagePosition: "top",
+  },
+  {
+    title: "Fonepay Circle",
+    description:
+      "A digital payment network enabling peer-to-peer and merchant transactions, including instant money transfer, split payments, and payment requests - improving transaction success rates and user adoption.",
+    tags: ["Product Management", "Payments", "P2P"],
+    image: "/projects/fonepay-circle.jpg",
     imagePosition: "top",
   },
   {
@@ -65,14 +73,6 @@ export const projects = [
       "A comprehensive HR management platform designed to streamline employee lifecycle processes, including recruitment, onboarding, attendance tracking, leave management, and performance evaluation.",
     tags: ["HRIS", "Development"],
     image: "/projects/neo-hrm.png",
-  },
-  {
-    title: "Fonepay Circle",
-    description:
-      "A digital payment network enabling peer-to-peer and merchant transactions, including instant money transfer, split payments, and payment requests - improving transaction success rates and user adoption.",
-    tags: ["Product Management", "Payments", "P2P"],
-    image: "/projects/fonepay-circle.jpg",
-    imagePosition: "top",
   },
   {
     title: "Cashback Management System",
