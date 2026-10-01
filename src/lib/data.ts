@@ -17,31 +17,53 @@ export const profile = {
 export const skills = [
   {
     category: "Product & Delivery",
+    proof: "5 Fonepay products led from initiation to deployment",
     items: [
       "End-to-End Product Delivery",
       "Agile & Scrum (Registered Product Owner™)",
       "Requirements & User Stories",
-      "Stakeholder Management",
       "Release Management",
+      "Process Optimisation",
       "BPMN Process Modelling",
     ],
   },
   {
-    category: "Fintech",
+    category: "Fintech & Payments",
+    proof: "Alipay+ · Fonepay Circle · Dispute Management System",
     items: [
-      "Fintech Strategy & Innovation",
       "Cross-Border Payments",
-      "Dispute Management Systems",
       "Digital Wallets & QR Payments",
+      "Dispute Management",
+      "Partner Integrations",
+      "Transaction Monitoring & Risk",
     ],
   },
   {
-    category: "Tools & Systems",
+    category: "Leadership & Communication",
+    proof: "Fonepay delivery teams · Teaching Academic at Macquarie",
     items: [
-      "JIRA",
-      "CRM, ERP & HRIS",
-      "Oracle Database, MySQL, SQL Server, SQLite",
-      "Blazor",
+      "Stakeholder Management",
+      "Cross-functional Team Coordination",
+      "Business-Tech Translation",
+      "Coaching & Training",
+    ],
+  },
+  {
+    category: "Tools & Technical",
+    proof: "Developer background - NEO HRM, APIs and databases",
+    groups: [
+      {
+        label: "Delivery",
+        items: ["JIRA", "Confluence", "MS Project / Trello / Asana", "Miro / Lucidchart", "Figma"],
+      },
+      {
+        label: "Data",
+        items: ["Excel (Advanced)", "Power BI / Tableau", "SQL (Oracle, MySQL, SQL Server, SQLite)"],
+      },
+      {
+        label: "Technical",
+        items: ["Postman", "Git / GitHub", "Blazor", "CRM, ERP & HRIS"],
+      },
     ],
   },
 ];
