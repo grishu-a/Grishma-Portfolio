@@ -16,6 +16,16 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: `${profile.name} - ${profile.role}`,
   description: profile.tagline,
+  openGraph: {
+    title: `${profile.name} - ${profile.role}`,
+    description: profile.tagline,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${profile.name} - ${profile.role}`,
+    description: profile.tagline,
+  },
 };
 
 const themeInitScript = `

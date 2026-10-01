@@ -1,14 +1,9 @@
-"use client";
-
-import { useState } from "react";
-import Link from "next/link";
 import { profile } from "@/lib/data";
 import { ArrowRightIcon } from "./icons";
-import ContactForm from "./ContactForm";
 import Reveal from "./Reveal";
 
 export default function Contact() {
-  const [formOpen, setFormOpen] = useState(false);
+  const mailto = `mailto:${profile.email}?subject=${encodeURIComponent("Opportunity for Grishma")}`;
 
   return (
     <section id="contact" className="mx-auto max-w-5xl px-6 py-20 sm:py-28">
@@ -31,17 +26,24 @@ export default function Contact() {
             I&apos;ll get back to you.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <ContactForm onOpenChange={setFormOpen} />
-            {!formOpen && (
-              <Link
-                href={profile.socials.linkedin}
-                className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-2.5 text-sm font-medium transition-colors hover:bg-background"
-              >
-                LinkedIn
-                <ArrowRightIcon className="h-4 w-4" />
-              </Link>
-            )}
+            <a
+              href={mailto}
+              className="btn-primary group inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-medium text-accent-foreground transition-transform hover:-translate-y-0.5"
+            >
+              Email me
+              <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </a>
+            <a
+              href={profile.socials.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-2.5 text-sm font-medium transition-colors hover:bg-background"
+            >
+              LinkedIn
+              <ArrowRightIcon className="h-4 w-4" />
+            </a>
           </div>
+          <p className="mt-6 font-mono text-sm text-muted select-all">{profile.email}</p>
         </div>
       </Reveal>
     </section>
