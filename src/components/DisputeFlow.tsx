@@ -77,7 +77,7 @@ export default function DisputeFlow() {
                     ? "bg-accent-3/15 text-teal-800 dark:text-teal-200"
                     : step.kind === "manual"
                       ? "bg-amber-500/15 text-amber-800 dark:text-amber-200"
-                      : "bg-border text-muted"
+                      : "bg-border text-slate-700 dark:text-slate-200"
                 }`}
               >
                 {step.kind === "auto" ? "Automated" : step.kind === "manual" ? "Manual" : "Start"}
