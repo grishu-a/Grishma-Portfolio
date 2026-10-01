@@ -28,7 +28,7 @@ export default function Projects() {
     <section id="projects" className="mx-auto max-w-5xl px-6 py-20 sm:py-24">
       <Reveal className="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <h2 className="eyebrow">03 · Projects</h2>
+          <h2 className="eyebrow">02 · Projects</h2>
           <h3 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
             Selected Projects
           </h3>

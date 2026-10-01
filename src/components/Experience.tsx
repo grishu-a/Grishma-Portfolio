@@ -32,7 +32,7 @@ export default function Experience() {
   return (
     <section id="experience" className="mx-auto max-w-5xl px-6 py-20 sm:py-24">
       <Reveal>
-        <h2 className="eyebrow">04 · Experience</h2>
+        <h2 className="eyebrow">03 · Experience</h2>
         <h3 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Experience</h3>
       </Reveal>
       <div className="mt-10 space-y-8 border-l border-border pl-6">

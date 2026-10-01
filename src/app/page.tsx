@@ -19,13 +19,13 @@ export default function Home() {
         <div className="band">
           <About />
         </div>
-        <Skills />
+        <Projects />
         <div className="band">
-          <Projects />
+          <Experience />
         </div>
-        <Experience />
+        <Recommendations />
         <div className="band">
-          <Recommendations />
+          <Skills />
         </div>
         <Education />
         <div className="band">

@@ -42,7 +42,7 @@ export default function Skills() {
   return (
     <section id="skills" className="mx-auto max-w-5xl px-6 py-20 sm:py-24">
       <Reveal>
-        <h2 className="eyebrow">02 · Skills</h2>
+        <h2 className="eyebrow">05 · Skills</h2>
         <h3 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
           Skills &amp; Expertise
         </h3>

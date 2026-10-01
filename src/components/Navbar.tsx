@@ -8,10 +8,10 @@ import { CloseIcon, MenuIcon } from "./icons";
 
 const links = [
   { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
   { href: "#recommendations", label: "Recommendations" },
+  { href: "#skills", label: "Skills" },
   { href: "#education", label: "Education" },
   { href: "#certifications", label: "Certifications" },
   { href: "#contact", label: "Contact" },

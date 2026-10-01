@@ -11,7 +11,7 @@ export default function Recommendations() {
   return (
     <section id="recommendations" className="mx-auto max-w-5xl px-6 py-20 sm:py-24">
       <Reveal>
-        <h2 className="eyebrow">05 · Recommendations</h2>
+        <h2 className="eyebrow">04 · Recommendations</h2>
         <h3 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
           What people say
         </h3>
