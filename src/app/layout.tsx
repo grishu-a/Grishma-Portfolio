@@ -30,6 +30,7 @@ export const metadata: Metadata = {
 
 const themeInitScript = `
 (function () {
+  document.documentElement.classList.add("js");
   try {
     var stored = localStorage.getItem("theme");
     var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;

@@ -61,7 +61,8 @@ main section[id] {
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.08em;
-  color: var(--accent);
+  /* Deepened toward the text colour so small labels stay readable over the hero glow */
+  color: color-mix(in srgb, var(--accent) 70%, var(--foreground));
 }
 
 .icon-badge {
@@ -189,6 +190,32 @@ main section[id] {
   transform: translateY(0);
 }
 
+/* Count-up numbers wait for JS so they don't flash their final value first;
+   the delayed animation is a fallback in case the script never runs. */
+.js .count-up:not(.is-counting) {
+  visibility: hidden;
+  animation: count-up-fallback 0s linear 3s forwards;
+}
+
+@keyframes count-up-fallback {
+  to {
+    visibility: visible;
+  }
+}
+
+.rise {
+  animation: rise 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(18px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
 .nav-link {
   position: relative;
 }
@@ -250,6 +277,7 @@ main section[id] {
   }
 
   .blob,
+  .rise,
   .animate-slide-down,
   .animate-ping {
     animation: none !important;

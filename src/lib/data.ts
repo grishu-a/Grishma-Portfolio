@@ -94,7 +94,7 @@ export const projects = [
     role: "Led from initiation to deployment",
     impact: "30% faster dispute resolution",
     description:
-      "Led delivery of a centralized platform for transaction disputes and customer complaints, automating case tracking, resolution workflows and notifications so operations and tech teams could resolve cases faster.",
+      "Led delivery of a centralised platform for transaction disputes and customer complaints, automating case tracking, resolution workflows and notifications so operations and tech teams could resolve cases faster.",
     tags: ["Fintech", "Product Management", "Operations"],
     image: "/projects/dispute.jpeg",
   },
@@ -158,7 +158,7 @@ export const experience = [
     period: "Feb 2024 - Jul 2025",
     bullets: [
       "Led multi-market payment initiatives from initiation to deployment, including the Dispute Management System, Alipay+, Fonepay Circle, Winner Announcement System, and Cashback Management System, enhancing operational scalability and supporting thousands of daily transactions.",
-      "Optimized workflows across cross-functional teams (product, tech, and operations), reducing dispute resolution time by 30% and improving process efficiency.",
+      "Optimised workflows across cross-functional teams (product, tech, and operations), reducing dispute resolution time by 30% and improving process efficiency.",
       "Implemented system enhancements and monitoring dashboards for platforms including Alipay+ and the Winner Announcement System, strengthening transaction oversight and mitigating operational risk.",
       "Bridged communication between business and technical stakeholders, translating requirements into actionable solutions and improving project delivery speed and quality.",
     ],

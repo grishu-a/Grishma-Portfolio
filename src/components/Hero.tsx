@@ -4,7 +4,6 @@ import CompanyLogo from "./CompanyLogo";
 import CountUp from "./CountUp";
 import HeroVisual from "./HeroVisual";
 import { ArrowRightIcon } from "./icons";
-import Reveal from "./Reveal";
 
 const highlights = [
   { value: "20M+", label: "Customers on the Fonepay network" },
@@ -19,6 +18,24 @@ const companies = [
   { name: "Macquarie University", logo: "/logos/macquarie.png" },
   { name: "Neosoftware", logo: "/logos/neosoftware.png" },
 ];
+
+// Above-the-fold content: a CSS-only slide-up that stays visible from first paint,
+// unlike Reveal, which hides content until JavaScript runs.
+function Rise({
+  children,
+  delay = 0,
+  className = "",
+}: {
+  children: React.ReactNode;
+  delay?: number;
+  className?: string;
+}) {
+  return (
+    <div className={`rise ${className}`} style={{ animationDelay: `${delay}ms` }}>
+      {children}
+    </div>
+  );
+}
 
 const [primaryRole, secondaryRole] = profile.role.split(" | ");
 
@@ -40,17 +57,17 @@ export default function Hero() {
       <div className="relative mx-auto max-w-5xl px-6 pb-20 pt-16 sm:pt-24">
         <div className="grid items-center gap-12 lg:grid-cols-[1.2fr_1fr]">
           <div>
-            <Reveal className="flex w-fit items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted">
+            <Rise className="flex w-fit items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
               </span>
               Open to Product & Project roles in Sydney
-            </Reveal>
-            <Reveal delay={80}>
+            </Rise>
+            <Rise delay={80}>
               <p className="eyebrow mt-6">Hi, I&apos;m {profile.name.split(" ")[0]}</p>
-            </Reveal>
-            <Reveal delay={140}>
+            </Rise>
+            <Rise delay={140}>
               <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
                 {primaryRole}
                 {secondaryRole && (
@@ -60,11 +77,11 @@ export default function Hero() {
                   </>
                 )}
               </h1>
-            </Reveal>
-            <Reveal delay={200}>
+            </Rise>
+            <Rise delay={200}>
               <p className="mt-6 max-w-xl text-lg text-muted">{profile.tagline}</p>
-            </Reveal>
-            <Reveal delay={260} className="mt-8 flex flex-wrap items-center gap-4">
+            </Rise>
+            <Rise delay={260} className="mt-8 flex flex-wrap items-center gap-4">
               <Link
                 href="#projects"
                 className="btn-primary group inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-accent-foreground transition-transform hover:-translate-y-0.5"
@@ -89,24 +106,23 @@ export default function Hero() {
                   View LinkedIn
                 </a>
               )}
-            </Reveal>
+            </Rise>
           </div>
-          <Reveal delay={200} className="hidden lg:block">
+          <Rise delay={200} className="hidden lg:block">
             <HeroVisual />
-          </Reveal>
+          </Rise>
         </div>
         <dl className="mt-14 grid grid-cols-2 gap-6 border-t border-border pt-8 sm:grid-cols-4">
           {highlights.map((item, index) => (
-            <Reveal key={item.label} delay={320 + index * 80}>
-              <dt className="sr-only">{item.label}</dt>
+            <Rise key={item.label} delay={320 + index * 80} className="flex flex-col-reverse">
+              <dt className="mt-1 text-xs text-muted">{item.label}</dt>
               <dd className="gradient-text text-3xl font-bold tabular-nums sm:text-4xl">
                 <CountUp value={item.value} delay={700 + index * 200} />
               </dd>
-              <p className="mt-1 text-xs text-muted">{item.label}</p>
-            </Reveal>
+            </Rise>
           ))}
         </dl>
-        <Reveal delay={500} className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
+        <Rise delay={500} className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
           <span className="font-mono text-xs uppercase tracking-widest text-muted">
             Experience across
           </span>
@@ -125,7 +141,7 @@ export default function Hero() {
               {company.name}
             </span>
           ))}
-        </Reveal>
+        </Rise>
       </div>
     </section>
   );

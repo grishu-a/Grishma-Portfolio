@@ -23,8 +23,13 @@ export default function CountUp({
 
   useEffect(() => {
     const node = ref.current;
-    if (!node || !match) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (!node) return;
+    // Numbers stay hidden (see .count-up in globals.css) until counting starts.
+    const show = () => node.classList.add("is-counting");
+    if (!match || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      show();
+      return;
+    }
 
     let frame = 0;
     let timer: ReturnType<typeof setTimeout> | undefined;
@@ -41,6 +46,7 @@ export default function CountUp({
           if (progress < 1) frame = requestAnimationFrame(tick);
         };
         setDisplay(`${(0).toFixed(decimals)}${suffix}`);
+        show();
         timer = setTimeout(() => {
           frame = requestAnimationFrame(tick);
         }, delay);
@@ -57,7 +63,7 @@ export default function CountUp({
   }, [value, duration, delay]);
 
   return (
-    <span ref={ref} aria-label={value}>
+    <span ref={ref} aria-label={value} className="count-up">
       {display}
     </span>
   );
