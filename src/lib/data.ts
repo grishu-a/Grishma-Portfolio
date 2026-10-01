@@ -84,8 +84,8 @@ export const projects = [
     role: "Led from initiation to deployment",
     impact: "Send · Request · Split - with just a mobile number",
     description:
-      "Led Fonepay Circle, one of Fonepay's flagship features, letting users send money, request payments and split bills using only a mobile number. Turned user flows into clear requirements and worked with the tech team through to deployment, improving transaction success rates and user adoption.",
-    tags: ["Product Management", "Payments", "P2P"],
+      "Led Fonepay Circle, one of Fonepay's flagship features and similar to Australia's PayID, letting users send money, request payments and split bills using only a mobile number. Turned user flows into clear requirements and worked with the tech team through to deployment, improving transaction success rates and user adoption.",
+    tags: ["Product Management", "Payments", "P2P", "PayID-style payments"],
     image: "/projects/fonepay-circle.jpg",
     imagePosition: "top",
   },
@@ -94,8 +94,8 @@ export const projects = [
     role: "Led from initiation to deployment",
     impact: "30% faster dispute resolution",
     description:
-      "Led delivery of a centralised platform for transaction disputes and customer complaints, automating case tracking, resolution workflows and notifications so operations and tech teams could resolve cases faster.",
-    tags: ["Fintech", "Product Management", "Operations"],
+      "Every customer and merchant dispute was handled manually, creating heavy effort for the operations team. I led delivery of a centralised platform that introduced automation for case tracking, resolution workflows and notifications, so teams could resolve disputes faster with far less manual work.",
+    tags: ["Fintech", "Product Management", "Operations", "Automation"],
     image: "/projects/dispute.jpeg",
   },
   {
