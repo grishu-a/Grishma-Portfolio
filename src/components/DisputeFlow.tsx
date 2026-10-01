@@ -70,13 +70,13 @@ export default function DisputeFlow() {
             style={{ animationDelay: `${index * 70}ms` }}
           >
             <div className="flex items-center justify-between gap-2">
-              <span className="font-mono text-[11px] text-muted">Step {index + 1}</span>
+              <span className="font-mono text-[11px] text-slate-600 dark:text-slate-300">Step {index + 1}</span>
               <span
                 className={`rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider ${
                   step.kind === "auto"
-                    ? "bg-accent-3/15 text-teal-700 dark:text-teal-300"
+                    ? "bg-accent-3/15 text-teal-800 dark:text-teal-200"
                     : step.kind === "manual"
-                      ? "bg-amber-500/15 text-amber-700 dark:text-amber-300"
+                      ? "bg-amber-500/15 text-amber-800 dark:text-amber-200"
                       : "bg-border text-muted"
                 }`}
               >
@@ -84,7 +84,7 @@ export default function DisputeFlow() {
               </span>
             </div>
             <p className="mt-2 font-semibold">{step.title}</p>
-            <p className="mt-1 text-xs leading-relaxed text-muted">{step.detail}</p>
+            <p className="mt-1 text-xs leading-relaxed text-slate-600 dark:text-slate-300">{step.detail}</p>
           </li>
         ))}
       </ol>

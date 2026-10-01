@@ -27,7 +27,7 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="text-[11px] font-medium text-slate-500">{label}</span>
+      <span className="text-[11px] font-medium text-slate-600">{label}</span>
       <input
         value={value}
         onChange={(e) => onChange(e.target.value)}
@@ -104,7 +104,7 @@ export default function CirclePrototype() {
         <div className="flex h-full flex-col overflow-hidden rounded-[1.8rem]">
           <div className="flex items-center gap-2 bg-white px-4 pb-3 pt-9 text-slate-900 shadow-sm">
             {screen !== "home" && screen !== "done" && (
-              <button type="button" onClick={() => go("home")} aria-label="Back" className="text-lg leading-none text-slate-500">
+              <button type="button" onClick={() => go("home")} aria-label="Back" className="text-lg leading-none text-slate-600">
                 ←
               </button>
             )}
@@ -114,7 +114,7 @@ export default function CirclePrototype() {
           <div className="flex flex-1 flex-col gap-3 overflow-y-auto p-4 text-slate-900">
             {screen === "home" && (
               <>
-                <p className="text-xs text-slate-500">Good afternoon</p>
+                <p className="text-xs text-slate-600">Good afternoon</p>
                 <p className="-mt-2 text-base font-semibold">Welcome back</p>
                 <div className="mt-2 rounded-2xl bg-gradient-to-br from-red-700 to-red-900 p-4 text-white">
                   <p className="text-[11px] font-semibold uppercase tracking-wider text-red-100">fonepay circle</p>
@@ -132,7 +132,7 @@ export default function CirclePrototype() {
                     ))}
                   </div>
                 </div>
-                <p className="mt-2 text-center text-[11px] text-slate-500">Tap Send, Request or Split to try it</p>
+                <p className="mt-2 text-center text-[11px] text-slate-600">Tap Send, Request or Split to try it</p>
               </>
             )}
 
