@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
-import { profile } from "@/lib/data";
+import { Analytics } from "@vercel/analytics/next";
+import { profile, siteUrl } from "@/lib/data";
 import "./globals.css";
 
 const jakartaSans = Plus_Jakarta_Sans({
@@ -14,6 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: `${profile.name} - ${profile.role}`,
   description: profile.tagline,
   openGraph: {
@@ -44,7 +46,7 @@ const themeInitScript = `
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
+      lang="en-AU"
       className={`${jakartaSans.variable} ${jetbrainsMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
@@ -53,6 +55,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       </head>
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
         {children}
+        <Analytics />
       </body>
     </html>
   );

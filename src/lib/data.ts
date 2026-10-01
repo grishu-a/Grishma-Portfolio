@@ -1,3 +1,12 @@
+// Update when a custom domain is connected; used for the sitemap and absolute share URLs.
+export const siteUrl = "https://grishma-portfolio-ruddy.vercel.app";
+
+export const caseStudies = [
+  { slug: "alipay-plus", title: "Alipay+ cross-border payments" },
+  { slug: "fonepay-circle", title: "Fonepay Circle" },
+  { slug: "dispute-management", title: "Dispute Management System" },
+];
+
 export const profile = {
   name: "Grishma Amatya",
   role: "Product & Project Delivery | Fintech & Payments",
