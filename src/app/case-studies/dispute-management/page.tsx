@@ -9,6 +9,7 @@ import {
   SkillChips,
   Steps,
 } from "@/components/CaseStudy";
+import DisputeFlow from "@/components/DisputeFlow";
 import { profile } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -134,7 +135,11 @@ export default function DisputeManagementCaseStudy() {
       </Section>
 
       <Section number="03 · The solution" title="What the platform automated">
-        <CheckCards items={automation} />
+        <p className="mb-5 text-sm text-muted">Switch between before and after to see what changed.</p>
+        <DisputeFlow />
+        <div className="mt-8">
+          <CheckCards items={automation} />
+        </div>
       </Section>
 
       <Section number="04 · Challenges" title="What made it hard">

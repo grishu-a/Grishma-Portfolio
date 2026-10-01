@@ -1,4 +1,5 @@
 import { profile } from "@/lib/data";
+import CopyEmail from "./CopyEmail";
 import { ArrowRightIcon } from "./icons";
 import Reveal from "./Reveal";
 
@@ -43,7 +44,7 @@ export default function Contact() {
               <ArrowRightIcon className="h-4 w-4" />
             </a>
           </div>
-          <p className="mt-6 font-mono text-sm text-muted select-all">{profile.email}</p>
+          <CopyEmail email={profile.email} />
         </div>
       </Reveal>
     </section>

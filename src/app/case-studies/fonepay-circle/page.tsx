@@ -9,6 +9,7 @@ import {
   SkillChips,
   Steps,
 } from "@/components/CaseStudy";
+import CirclePrototype from "@/components/CirclePrototype";
 import { profile, recommendations } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -169,6 +170,18 @@ export default function FonepayCircleCaseStudy() {
           ))}
         </div>
         <CheckCards items={features} />
+        <div className="mt-12 grid items-center gap-8 rounded-2xl border border-border bg-card p-6 sm:p-8 md:grid-cols-[1fr_auto]">
+          <div>
+            <p className="eyebrow">Try it yourself</p>
+            <h3 className="mt-2 text-xl font-bold tracking-tight">Send, request or split - in a few taps</h3>
+            <p className="mt-3 text-sm leading-relaxed text-muted">
+              This demo walks through the three core journeys. Try entering a mobile number
+              with the wrong number of digits - catching mistakes like that before money moves
+              was one of the key problems the flows had to solve.
+            </p>
+          </div>
+          <CirclePrototype />
+        </div>
       </Section>
 
       <Section number="04 · Challenges" title="What made it hard">
