@@ -74,8 +74,9 @@ export const projects = [
     role: "Led from initiation to deployment",
     impact: "11+ countries · 1.7M+ merchants",
     description:
-      "Led delivery of Fonepay's Alipay+ integration, letting international visitors pay across Nepal with their home e-wallets such as Alipay, KakaoPay and GCash. Coordinated partner, product and engineering teams, and owned the monitoring dashboards used to oversee cross-border transactions.",
+      "Led delivery of Fonepay's Alipay+ integration, letting international visitors pay across Nepal with their home e-wallets such as Alipay, KakaoPay and GCash. Coordinated the Alipay+ team, banks, settlement and finance, compliance and engineering through to deployment.",
     tags: ["Cross-Border Payments", "Fintech", "Partnerships"],
+    caseStudy: "/case-studies/alipay-plus",
     image: "/projects/alipay.png",
     imagePosition: "top",
   },
@@ -118,7 +119,7 @@ export const projects = [
     title: "Winner Announcement System",
     role: "Led from initiation to deployment",
     description:
-      "An automated system for selecting and announcing winners of promotional campaigns, with monitoring dashboards to ensure transparency, accuracy and timely communication with participants.",
+      "An automated system for selecting and announcing winners of promotional campaigns, ensuring transparency, accuracy and timely communication with participants.",
     tags: ["Automation", "Product Management"],
   },
 ];
@@ -160,7 +161,7 @@ export const experience = [
     bullets: [
       "Led multi-market payment initiatives from initiation to deployment, including the Dispute Management System, Alipay+, Fonepay Circle, Winner Announcement System, and Cashback Management System, enhancing operational scalability and supporting thousands of daily transactions.",
       "Optimised workflows across cross-functional teams (product, tech, and operations), reducing dispute resolution time by 30% and improving process efficiency.",
-      "Implemented system enhancements and monitoring dashboards for platforms including Alipay+ and the Winner Announcement System, strengthening transaction oversight and mitigating operational risk.",
+      "Implemented system enhancements and monitoring dashboards across the Fonepay platform, strengthening transaction oversight and mitigating operational risk.",
       "Bridged communication between business and technical stakeholders, translating requirements into actionable solutions and improving project delivery speed and quality.",
     ],
   },
