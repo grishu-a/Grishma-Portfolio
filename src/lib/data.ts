@@ -71,6 +71,8 @@ export const projects = [
     description:
       "A digital payment network enabling peer-to-peer and merchant transactions, including instant money transfer, split payments, and payment requests - improving transaction success rates and user adoption.",
     tags: ["Product Management", "Payments", "P2P"],
+    image: "/projects/fonepay-circle.jpg",
+    imagePosition: "top",
   },
   {
     title: "Cashback Management System",
