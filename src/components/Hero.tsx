@@ -60,12 +60,23 @@ export default function Hero() {
             View my work
             <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
-          <Link
-            href={profile.resumeUrl}
-            className="rounded-full border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:bg-card"
-          >
-            Download résumé
-          </Link>
+          {profile.resumeUrl ? (
+            <Link
+              href={profile.resumeUrl}
+              className="rounded-full border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:bg-card"
+            >
+              Download résumé
+            </Link>
+          ) : (
+            <a
+              href={profile.socials.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:bg-card"
+            >
+              View LinkedIn
+            </a>
+          )}
         </Reveal>
         <dl className="mt-14 grid max-w-3xl grid-cols-2 gap-6 sm:grid-cols-4 border-t border-border pt-8">
           {highlights.map((item, index) => (

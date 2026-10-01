@@ -40,6 +40,12 @@ export default function Projects() {
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <h3 className="mt-4 text-lg font-semibold">{project.title}</h3>
+                {project.role && (
+                  <p className="mt-1 font-mono text-xs text-muted">{project.role}</p>
+                )}
+                {project.impact && (
+                  <p className="gradient-text mt-3 text-base font-bold">{project.impact}</p>
+                )}
                 <p className="mt-2 flex-1 text-sm text-muted">{project.description}</p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
