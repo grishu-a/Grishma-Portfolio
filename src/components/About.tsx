@@ -1,7 +1,11 @@
 import Image from "next/image";
 import { profile, recommendations } from "@/lib/data";
 import { MailIcon, MapPinIcon } from "./icons";
+import CountUp from "./CountUp";
 import Reveal from "./Reveal";
+
+// Numbers like "2,000,000" or "96%" in the bio count up and stand out.
+const statPattern = /(\d{1,3}(?:,\d{3})+|\d+(?:\.\d+)?%)/;
 
 const featuredQuote = recommendations[0];
 
@@ -14,7 +18,21 @@ export default function About() {
       </Reveal>
       <div className="mt-8 grid gap-8 sm:grid-cols-3">
         <Reveal delay={80} className="sm:col-span-2">
-          <p className="text-base leading-relaxed text-muted">{profile.bio}</p>
+          <p className="text-base leading-relaxed text-muted">
+            {profile.bio.split(statPattern).map((part, i) =>
+              i % 2 === 1 ? (
+                <strong
+                  key={i}
+                  className="gradient-text inline-block text-right font-bold tabular-nums"
+                  style={{ minWidth: `${part.length}ch` }}
+                >
+                  <CountUp value={part} />
+                </strong>
+              ) : (
+                part
+              ),
+            )}
+          </p>
           <figure className="mt-8 border-l-2 border-accent pl-5">
             <blockquote className="text-lg font-medium leading-snug">
               &ldquo;A rare blend of sharp analytical skills and strong managerial
