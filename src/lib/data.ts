@@ -88,6 +88,25 @@ export const projects = [
   },
 ];
 
+export const recommendations = [
+  {
+    name: "Sweta Kapali Shrestha",
+    title: "Ex-Head of PM, Fonepay",
+    relationship: "Managed Grishma directly",
+    source: "LinkedIn recommendation",
+    quote:
+      "She consistently impressed me with her creativity and infectious enthusiasm. She possesses a rare blend of sharp analytical skills and strong managerial oversight, making her an outstanding professional. Grishma will undoubtedly add significant value to any organization she joins.",
+  },
+  {
+    name: "Babul Shrestha",
+    title: "Sr. Business Analyst & Product Owner",
+    relationship: "Worked on the same team at Fonepay",
+    source: "LinkedIn recommendation",
+    quote:
+      "She has a strong grasp of product workflows and took ownership of key deliverables, including Dispute Management and Fonepay Circle, one of Fonepay's prominent features. Her professionalism, teamwork, and ability to deliver quality results make her a valuable asset to any organization.",
+  },
+];
+
 export const experience = [
   {
     role: "Teaching Associate",

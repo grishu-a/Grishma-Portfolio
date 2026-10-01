@@ -7,7 +7,7 @@ export default function Certifications() {
   return (
     <section id="certifications" className="mx-auto max-w-5xl px-6 py-20 sm:py-24">
       <Reveal>
-        <h2 className="eyebrow">06 · Certifications</h2>
+        <h2 className="eyebrow">07 · Certifications</h2>
         <h3 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
           Certifications
         </h3>

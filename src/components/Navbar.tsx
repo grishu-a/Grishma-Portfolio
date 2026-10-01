@@ -11,6 +11,7 @@ const links = [
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
+  { href: "#recommendations", label: "Recommendations" },
   { href: "#education", label: "Education" },
   { href: "#certifications", label: "Certifications" },
   { href: "#contact", label: "Contact" },
@@ -35,12 +36,13 @@ export default function Navbar() {
           <span className="btn-primary flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold text-accent-foreground transition-transform hover:scale-105">
             {initials}
           </span>
-          <span className="font-mono text-sm font-semibold tracking-tight">
+          <span className="font-mono text-sm font-semibold tracking-tight whitespace-nowrap">
             {profile.name}
           </span>
         </Link>
-        <div className="hidden items-center gap-6 lg:flex">
-          {links.map((link) => (
+        <div className="hidden items-center gap-5 xl:flex">
+          {/* Contact is covered by the "Get in touch" button on desktop */}
+          {links.filter((link) => link.href !== "#contact").map((link) => (
             <Link
               key={link.href}
               href={link.href}
@@ -62,15 +64,15 @@ export default function Navbar() {
             onClick={() => setOpen((prev) => !prev)}
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-foreground transition-all hover:bg-card active:scale-90 lg:hidden"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-foreground transition-all hover:bg-card active:scale-90 xl:hidden"
           >
             {open ? <CloseIcon className="h-4 w-4" /> : <MenuIcon className="h-4 w-4" />}
           </button>
         </div>
       </nav>
       <div
-        className={`overflow-hidden border-t border-border transition-[max-height,opacity] duration-300 ease-in-out lg:hidden ${
-          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        className={`overflow-hidden border-t border-border transition-[max-height,opacity] duration-300 ease-in-out xl:hidden ${
+          open ? "max-h-[32rem] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <div className="mx-auto flex max-w-5xl flex-col gap-1 px-6 py-4">

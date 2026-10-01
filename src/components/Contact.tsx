@@ -22,7 +22,7 @@ export default function Contact() {
           aria-hidden="true"
         />
         <div className="relative">
-          <h2 className="eyebrow justify-center">07 · Contact</h2>
+          <h2 className="eyebrow justify-center">08 · Contact</h2>
           <h3 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
             Let&apos;s build something together
           </h3>
