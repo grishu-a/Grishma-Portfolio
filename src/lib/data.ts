@@ -87,6 +87,7 @@ export const projects = [
     description:
       "Led Fonepay Circle, one of Fonepay's flagship features and similar to Australia's PayID, letting users send money, request payments and split bills using only a mobile number. Turned user flows into clear requirements and worked with the tech team through to deployment, improving transaction success rates and user adoption.",
     tags: ["Product Management", "Payments", "P2P", "PayID-style payments"],
+    caseStudy: "/case-studies/fonepay-circle",
     image: "/projects/fonepay-circle.jpg",
     imagePosition: "top",
   },
