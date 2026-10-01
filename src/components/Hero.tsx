@@ -33,7 +33,7 @@ export default function Hero() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
           </span>
-          Open to new opportunities
+          Open to Product & Project roles in Sydney
         </Reveal>
         <Reveal delay={80}>
           <p className="eyebrow mt-6">Hi, I&apos;m {profile.name.split(" ")[0]}</p>
