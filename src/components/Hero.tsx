@@ -100,7 +100,7 @@ export default function Hero() {
             <Reveal key={item.label} delay={320 + index * 80}>
               <dt className="sr-only">{item.label}</dt>
               <dd className="gradient-text text-3xl font-bold tabular-nums sm:text-4xl">
-                <CountUp value={item.value} />
+                <CountUp value={item.value} delay={700 + index * 200} />
               </dd>
               <p className="mt-1 text-xs text-muted">{item.label}</p>
             </Reveal>
