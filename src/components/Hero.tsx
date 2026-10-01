@@ -134,7 +134,7 @@ export default function Hero() {
               {company.logo ? (
                 <CompanyLogo src={company.logo} alt="" size={28} />
               ) : (
-                <span className="flex h-7 w-7 items-center justify-center rounded-lg border border-border bg-white text-[10px] font-bold text-sky-600">
+                <span className="flex h-7 w-7 items-center justify-center rounded-lg border border-border bg-white text-[10px] font-bold text-sky-700">
                   A+
                 </span>
               )}
