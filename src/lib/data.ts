@@ -4,6 +4,7 @@ export const profile = {
   tagline:
     "I ship fintech products at national scale. At Fonepay, Nepal's leading payment network, I led products built for 20M+ customers and 1.7M+ merchants - from bringing Alipay+ cross-border payments to Nepal to cutting dispute resolution time by 30%.",
   bio: "I'm a product and project delivery professional who has shipped payment products at Fonepay, Nepal's leading payment network - a platform that has processed over a million payments in a single day. I led the Dispute Management System, Alipay+ cross-border payments and the Fonepay Circle peer-to-peer network, taking every project from initiation to deployment and aligning product, engineering and operations along the way. I'm a team player with an innovative mindset, at my best when bringing people together to solve problems in new ways. Before moving into product, I was a software developer, so I work closely with engineers on technical trade-offs. Now based in Sydney, I'm a Teaching Academic at Macquarie University, teaching Project Management and Professional Practice.",
+  photo: "/profile/grishma.webp",
   location: "Sydney, NSW, Australia",
   email: "amatya650@gmail.com",
   // Add the résumé to public/ and set this to e.g. "/resume.pdf" to show the download button
