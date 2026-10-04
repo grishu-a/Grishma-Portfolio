@@ -12,6 +12,20 @@ const highlights = [
   { value: "30%", label: "Faster dispute resolution" },
 ];
 
+// The 30-second summary for readers who only see the first screen.
+const glance: { label: string; value?: string; links?: { label: string; href: string }[] }[] = [
+  { label: "Role", value: "Product & project delivery" },
+  { label: "Focus", value: "Payments & fintech" },
+  { label: "Based in", value: "Sydney, NSW" },
+  {
+    label: "Start here",
+    links: [
+      { label: "3 case studies", href: "#projects" },
+      { label: "1 article", href: "#insights" },
+    ],
+  },
+];
+
 const companies = [
   { name: "Fonepay", logo: "/logos/fonepay.jpg" },
   { name: "Alipay+" },
@@ -81,7 +95,7 @@ export default function Hero() {
             <Rise delay={200}>
               <p className="mt-6 max-w-xl text-lg text-muted">{profile.tagline}</p>
             </Rise>
-            <Rise delay={260} className="mt-8 flex flex-wrap items-center gap-4">
+            <Rise delay={260} className="no-print mt-8 flex flex-wrap items-center gap-4">
               <Link
                 href="#projects"
                 className="btn-primary group inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-accent-foreground transition-transform hover:-translate-y-0.5"
@@ -141,6 +155,33 @@ export default function Hero() {
               {company.name}
             </span>
           ))}
+        </Rise>
+        <Rise delay={560} className="mt-8">
+          <dl className="grid gap-px overflow-hidden rounded-2xl border border-border bg-border text-sm sm:grid-cols-2 lg:grid-cols-4">
+            {glance.map((item) => (
+              <div key={item.label} className="bg-card px-4 py-3">
+                <dt className="font-mono text-[11px] uppercase tracking-widest text-muted">
+                  {item.label}
+                </dt>
+                <dd className="mt-1 font-medium">
+                  {item.links ? (
+                    <span className="flex flex-wrap gap-x-2">
+                      {item.links.map((link, i, all) => (
+                        <span key={link.href}>
+                          <Link href={link.href} className="text-accent hover:underline">
+                            {link.label}
+                          </Link>
+                          {i < all.length - 1 && <span className="text-muted"> ·</span>}
+                        </span>
+                      ))}
+                    </span>
+                  ) : (
+                    item.value
+                  )}
+                </dd>
+              </div>
+            ))}
+          </dl>
         </Rise>
       </div>
     </section>

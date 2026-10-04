@@ -27,7 +27,7 @@ export default function Projects() {
   const more = projects.slice(FEATURED_COUNT);
 
   return (
-    <section id="projects" className="mx-auto max-w-5xl px-6 py-20 sm:py-24">
+    <section id="projects" className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
       <Reveal className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <h2 className="eyebrow">02 · Projects</h2>
@@ -80,7 +80,7 @@ export default function Projects() {
               {project.impact && (
                 <p className="gradient-text mt-4 text-xl font-bold">{project.impact}</p>
               )}
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
+              <p className="mt-3 flex-1 text-[15px] leading-relaxed text-muted">
                 {project.description}
               </p>
               <Tags tags={project.tags} />
@@ -112,23 +112,37 @@ export default function Projects() {
                 delay={index * 100}
                 className="card-surface flex flex-col overflow-hidden"
               >
-                {project.image && (
+                {/* Every card gets the same header height so the row lines up. */}
+                {project.image ? (
                   <ProjectImage
                     src={project.image}
                     title={project.title}
                     position={project.imagePosition}
-                    className="h-32"
+                    className="h-28"
                   />
-                )}
-                <div className="flex flex-1 flex-col p-5">
-                  <span
-                    className={`icon-badge h-8 w-8 font-mono text-[11px] font-semibold ${
+                ) : (
+                  <div
+                    className={`icon-badge flex h-28 w-full items-end rounded-none p-5 ${
                       badgeVariants[(index + FEATURED_COUNT) % 3]
                     }`}
+                    aria-hidden="true"
                   >
-                    {String(index + FEATURED_COUNT + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="mt-3 font-semibold">{project.title}</h3>
+                    <span className="font-mono text-4xl font-bold opacity-40">
+                      {String(index + FEATURED_COUNT + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+                )}
+                <div className="flex flex-1 flex-col p-5">
+                  {project.image && (
+                    <span
+                      className={`icon-badge mb-3 h-8 w-8 font-mono text-[11px] font-semibold ${
+                        badgeVariants[(index + FEATURED_COUNT) % 3]
+                      }`}
+                    >
+                      {String(index + FEATURED_COUNT + 1).padStart(2, "0")}
+                    </span>
+                  )}
+                  <h3 className="font-semibold">{project.title}</h3>
                   {project.role && (
                     <p className="mt-1 font-mono text-[11px] text-muted">{project.role}</p>
                   )}

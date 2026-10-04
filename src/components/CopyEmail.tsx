@@ -22,7 +22,7 @@ export default function CopyEmail({ email }: { email: string }) {
       <button
         type="button"
         onClick={copy}
-        className="inline-flex items-center gap-1.5 rounded-full border border-border bg-background px-3 py-1 text-xs font-medium transition-colors hover:border-accent hover:text-accent"
+        className="no-print inline-flex items-center gap-1.5 rounded-full border border-border bg-background px-3 py-1 text-xs font-medium transition-colors hover:border-accent hover:text-accent"
       >
         {copied ? (
           <>

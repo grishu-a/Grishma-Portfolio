@@ -7,7 +7,6 @@ import Insights from "@/components/Insights";
 import Experience from "@/components/Experience";
 import Recommendations from "@/components/Recommendations";
 import Education from "@/components/Education";
-import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { education, profile, siteUrl } from "@/lib/data";
@@ -54,9 +53,6 @@ export default function Home() {
           <Skills />
         </div>
         <Education />
-        <div className="band">
-          <Certifications />
-        </div>
         <Contact />
       </main>
       <Footer />

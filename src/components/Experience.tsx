@@ -30,7 +30,7 @@ const FULL_DETAIL_ROLES = 2;
 
 export default function Experience() {
   return (
-    <section id="experience" className="mx-auto max-w-5xl px-6 py-20 sm:py-24">
+    <section id="experience" className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
       <Reveal>
         <h2 className="eyebrow">03 · Experience</h2>
         <h3 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Experience</h3>
@@ -55,13 +55,13 @@ export default function Experience() {
               <span className="font-mono text-xs text-muted">{job.period}</span>
             </div>
             {index < FULL_DETAIL_ROLES || job.bullets.length === 1 ? (
-              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-muted">
+              <ul className="mt-2 list-disc space-y-1.5 pl-5 text-[15px] leading-relaxed text-muted">
                 {job.bullets.map((bullet) => (
                   <li key={bullet}>{highlight(bullet)}</li>
                 ))}
               </ul>
             ) : (
-              <details className="group mt-2 text-sm text-muted">
+              <details className="group mt-2 text-[15px] leading-relaxed text-muted">
                 <summary className="cursor-pointer list-none pl-5">
                   {highlight(job.bullets[0])}{" "}
                   {job.bullets.length > 1 && (

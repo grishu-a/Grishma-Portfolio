@@ -8,7 +8,7 @@ export default function Insights() {
   if (!latest) return null;
 
   return (
-    <section id="insights" className="mx-auto max-w-5xl px-6 pb-20 sm:pb-24">
+    <section id="insights" className="mx-auto max-w-5xl px-6 pb-16 sm:pb-20">
       <Reveal>
         <Link
           href={`/insights/${latest.slug}`}

@@ -104,7 +104,7 @@ export default function DisputeManagementCaseStudy() {
         </>
       }
       facts={facts}
-      image={{ src: "/projects/dispute.jpeg", alt: "Dispute Management System" }}
+      image={{ src: "/projects/dispute.jpeg", alt: "Dispute Management System", position: "left" }}
     >
       <Section number="01 · The problem" title="Every dispute was handled by hand">
         <Prose>

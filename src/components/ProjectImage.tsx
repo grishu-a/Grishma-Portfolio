@@ -29,7 +29,7 @@ export default function ProjectImage({
           alt=""
           fill
           className={`object-cover transition-transform duration-500 group-hover:scale-105 ${
-            position === "top" ? "object-top" : ""
+            position === "top" ? "object-top" : position === "left" ? "object-left" : ""
           }`}
         />
         <span className="absolute bottom-3 right-3 rounded-full bg-black/60 px-3 py-1 text-xs font-medium text-white opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">

@@ -1,14 +1,17 @@
 import { education } from "@/lib/data";
 import CompanyLogo from "./CompanyLogo";
 import { GraduationCapIcon } from "./icons";
+import Certifications from "./Certifications";
 import Reveal from "./Reveal";
 
 export default function Education() {
   return (
-    <section id="education" className="mx-auto max-w-5xl px-6 py-20 sm:py-24">
+    <section id="education" className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
       <Reveal>
-        <h2 className="eyebrow">06 · Education</h2>
-        <h3 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Education</h3>
+        <h2 className="eyebrow">06 · Education &amp; Certifications</h2>
+        <h3 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
+          Education &amp; Certifications
+        </h3>
       </Reveal>
       <div className="mt-8 grid gap-6 sm:grid-cols-2">
         {education.map((item, index) => (
@@ -33,6 +36,7 @@ export default function Education() {
           </Reveal>
         ))}
       </div>
+      <Certifications />
     </section>
   );
 }

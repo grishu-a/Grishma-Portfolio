@@ -37,7 +37,7 @@ export function CaseStudyShell({
   title: string;
   lead: ReactNode;
   facts: { label: string; value: string }[];
-  image: { src: string; alt: string; position?: "top" };
+  image: { src: string; alt: string; position?: "top" | "left" };
   children: ReactNode;
 }) {
   return (
@@ -67,7 +67,7 @@ export function CaseStudyShell({
             fill
             priority
             sizes="(min-width: 768px) 720px, 100vw"
-            className={`object-cover ${image.position === "top" ? "object-top" : ""}`}
+            className={`object-cover ${image.position === "top" ? "object-top" : image.position === "left" ? "object-left" : ""}`}
           />
         </div>
 

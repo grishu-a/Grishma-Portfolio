@@ -25,7 +25,7 @@ function emphasise(quote: string, phrases: string[] = []): ReactNode[] {
 
 export default function Recommendations() {
   return (
-    <section id="recommendations" className="mx-auto max-w-5xl px-6 py-20 sm:py-24">
+    <section id="recommendations" className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
       <Reveal>
         <h2 className="eyebrow">04 · Recommendations</h2>
         <h3 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
@@ -70,7 +70,7 @@ export default function Recommendations() {
               <p className="mt-1 text-xl font-bold leading-snug tracking-tight">
                 {rec.headline}
               </p>
-              <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-muted">
+              <blockquote className="mt-4 flex-1 text-[15px] leading-relaxed text-muted">
                 {emphasise(rec.quote, rec.highlights)}
               </blockquote>
               <figcaption className="mt-6 flex items-center gap-3 border-t border-border pt-4">

@@ -5,14 +5,12 @@ import Reveal from "./Reveal";
 
 export default function Certifications() {
   return (
-    <section id="certifications" className="mx-auto max-w-5xl px-6 py-20 sm:py-24">
+    // Rendered inside the Education section; keeps its own anchor for links.
+    <div id="certifications" className="mt-12 scroll-mt-20">
       <Reveal>
-        <h2 className="eyebrow">07 · Certifications</h2>
-        <h3 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
-          Certifications
-        </h3>
+        <h4 className="font-mono text-xs uppercase tracking-widest text-muted">Certifications</h4>
       </Reveal>
-      <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {certifications.map((cert, index) => {
           const content = (
             <>
@@ -57,6 +55,6 @@ export default function Certifications() {
           );
         })}
       </div>
-    </section>
+    </div>
   );
 }

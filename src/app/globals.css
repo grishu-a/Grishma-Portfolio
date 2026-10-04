@@ -5,7 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #0f172a;
-  --muted: #64748b;
+  --muted: #475569;
   --card: #f8fafc;
   --border: #e2e8f0;
   --accent: #4f46e5;
@@ -177,16 +177,13 @@ main section[id] {
   animation: float 9s ease-in-out infinite;
 }
 
+/* Content stays visible for fast scrollers, PDFs and print; scrolling only adds a gentle slide. */
 .reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition:
-    opacity 0.6s ease,
-    transform 0.6s ease;
+  transform: translateY(12px);
+  transition: transform 0.6s ease;
 }
 
 .reveal.is-visible {
-  opacity: 1;
   transform: translateY(0);
 }
 
@@ -280,7 +277,6 @@ main section[id] {
   }
 
   .reveal {
-    opacity: 1 !important;
     transform: none !important;
     transition: none !important;
   }
@@ -295,5 +291,66 @@ main section[id] {
   .animate-slide-down,
   .animate-ping {
     animation: none !important;
+  }
+}
+
+/* Print and "Save as PDF": clean A4 layout without navigation or effects */
+@media print {
+  @page {
+    size: A4;
+    margin: 14mm;
+  }
+
+  :root,
+  .dark {
+    --background: #ffffff;
+    --foreground: #0f172a;
+    --muted: #334155;
+    --card: #ffffff;
+    --border: #cbd5e1;
+  }
+
+  html {
+    font-size: 13px;
+  }
+
+  header,
+  .scroll-progress,
+  .blob,
+  .hero-visual,
+  dialog,
+  .no-print {
+    display: none !important;
+  }
+
+  .band {
+    background: none !important;
+    border: 0 !important;
+  }
+
+  .reveal,
+  .rise,
+  .flow-step,
+  .card-surface {
+    transform: none !important;
+    animation: none !important;
+    box-shadow: none !important;
+  }
+
+  section,
+  .card-surface,
+  figure,
+  li {
+    break-inside: avoid;
+  }
+
+  main section {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  .gradient-text {
+    background: none !important;
+    color: #4338ca !important;
   }
 }
