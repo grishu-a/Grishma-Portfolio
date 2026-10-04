@@ -8,6 +8,23 @@ import ThemeToggle from "./ThemeToggle";
 
 type Item = { title: string; body: string };
 
+export function SubpageHeader({ backHref = "/#projects" }: { backHref?: string }) {
+  return (
+    <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
+      <nav className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4">
+        <Link
+          href={backHref}
+          className="inline-flex items-center gap-2 text-sm font-medium text-muted transition-colors hover:text-foreground"
+        >
+          <ArrowRightIcon className="h-4 w-4 rotate-180" />
+          Back to portfolio
+        </Link>
+        <ThemeToggle />
+      </nav>
+    </header>
+  );
+}
+
 export function CaseStudyShell({
   eyebrow,
   title,
@@ -25,18 +42,7 @@ export function CaseStudyShell({
 }) {
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
-        <nav className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4">
-          <Link
-            href="/#projects"
-            className="inline-flex items-center gap-2 text-sm font-medium text-muted transition-colors hover:text-foreground"
-          >
-            <ArrowRightIcon className="h-4 w-4 rotate-180" />
-            Back to portfolio
-          </Link>
-          <ThemeToggle />
-        </nav>
-      </header>
+      <SubpageHeader />
 
       <main className="mx-auto w-full max-w-3xl flex-1 px-6 pb-24 pt-14">
         <p className="eyebrow">{eyebrow}</p>

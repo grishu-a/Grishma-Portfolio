@@ -9,6 +9,7 @@ import { CloseIcon, MenuIcon } from "./icons";
 const links = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
+  { href: "#insights", label: "Insights" },
   { href: "#experience", label: "Experience" },
   { href: "#recommendations", label: "Recommendations" },
   { href: "#skills", label: "Skills" },
@@ -16,6 +17,10 @@ const links = [
   { href: "#certifications", label: "Certifications" },
   { href: "#contact", label: "Contact" },
 ];
+
+// Kept to the mobile menu so the desktop bar fits: Contact is covered by the
+// "Get in touch" button, and Education sits right beside Certifications.
+const desktopHidden = new Set(["#contact", "#education"]);
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -82,8 +87,7 @@ export default function Navbar() {
           </span>
         </Link>
         <div className="hidden items-center gap-5 xl:flex">
-          {/* Contact is covered by the "Get in touch" button on desktop */}
-          {links.filter((link) => link.href !== "#contact").map((link) => (
+          {links.filter((link) => !desktopHidden.has(link.href)).map((link) => (
             <Link
               key={link.href}
               href={link.href}

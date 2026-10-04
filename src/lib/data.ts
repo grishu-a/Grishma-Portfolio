@@ -7,6 +7,17 @@ export const caseStudies = [
   { slug: "dispute-management", title: "Dispute Management System" },
 ];
 
+export const insights = [
+  {
+    slug: "nepal-qr-lessons-for-australia",
+    title: "Scan or tap: what Nepal's QR boom can - and can't - teach Australia",
+    summary:
+      "Nepal's QR payments grew tenfold in three years while Australians barely use QR at all. What the central bank data - and building payment products at Fonepay - says about paying people, trust and real-time payments.",
+    date: "October 2026",
+    readTime: "5 min read",
+  },
+];
+
 export const profile = {
   name: "Grishma Amatya",
   role: "Product & Project Delivery | Fintech & Payments",
