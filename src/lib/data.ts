@@ -133,7 +133,6 @@ export const projects = [
     description:
       "Developed features for a comprehensive HR management platform covering the full employee lifecycle - recruitment, onboarding, attendance tracking, leave management and performance evaluation.",
     tags: ["HRIS", "Development"],
-    image: "/projects/neo-hrm.png",
   },
   {
     title: "Cashback Management System",
