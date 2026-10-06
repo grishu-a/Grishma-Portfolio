@@ -108,13 +108,19 @@ export const projects = [
   {
     title: "Fonepay Circle",
     role: "Led from initiation to deployment",
-    impact: "Send · Request · Split - with just a mobile number",
+    impact: "Send · Request · Split by mobile number",
     description:
       "Led Fonepay Circle, one of Fonepay's flagship features and similar to Australia's PayID, letting users send money, request payments and split bills using only a mobile number. Turned user flows into clear requirements and worked with the tech team through to deployment, improving transaction success rates and user adoption.",
     tags: ["Product Management", "Payments", "P2P", "PayID-style payments"],
     caseStudy: "/case-studies/fonepay-circle",
     image: "/projects/fonepay-circle.jpg",
     imagePosition: "top",
+    // Shown instead of the wide banner on the project card: three equal phone screens.
+    screens: [
+      { src: "/hero/circle-2.webp", label: "Send" },
+      { src: "/hero/circle-4.webp", label: "Request" },
+      { src: "/hero/circle-3.webp", label: "Split" },
+    ],
   },
   {
     title: "Dispute Management System",

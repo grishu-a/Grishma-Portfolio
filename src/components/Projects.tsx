@@ -52,15 +52,31 @@ export default function Projects() {
               index % 2 === 1 ? "lg:flex-row-reverse" : ""
             }`}
           >
-            {project.image && (
-              <div className="lg:w-[46%] lg:shrink-0">
-                <ProjectImage
-                  src={project.image}
-                  title={project.title}
-                  position={project.imagePosition}
-                  className="h-56 sm:h-64 lg:h-full lg:min-h-[320px]"
-                />
+            {project.screens ? (
+              <div className="grid grid-cols-3 items-center gap-3 bg-gradient-to-br from-red-50 to-rose-100 p-5 sm:gap-4 sm:p-6 lg:w-[46%] lg:shrink-0 dark:from-red-950/40 dark:to-rose-900/30">
+                {project.screens.map((screen) => (
+                  <figure key={screen.src} className="flex flex-col items-center gap-2">
+                    <ProjectImage
+                      src={screen.src}
+                      title={`${project.title} - ${screen.label}`}
+                      position="top"
+                      className="aspect-[440/900] rounded-xl shadow-md ring-1 ring-black/5"
+                    />
+                    <figcaption className="font-mono text-[11px] text-muted">{screen.label}</figcaption>
+                  </figure>
+                ))}
               </div>
+            ) : (
+              project.image && (
+                <div className="lg:w-[46%] lg:shrink-0">
+                  <ProjectImage
+                    src={project.image}
+                    title={project.title}
+                    position={project.imagePosition}
+                    className="h-56 sm:h-64 lg:h-full lg:min-h-[320px]"
+                  />
+                </div>
+              )
             )}
             <div className="flex flex-1 flex-col p-6 sm:p-8">
               <div className="flex items-center gap-3">
