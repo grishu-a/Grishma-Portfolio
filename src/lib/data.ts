@@ -129,7 +129,7 @@ export const projects = [
   },
   {
     title: "NEO HRM",
-    role: "Developer · from initiation to deployment",
+    role: "Developer",
     description:
       "Developed features for a comprehensive HR management platform covering the full employee lifecycle - recruitment, onboarding, attendance tracking, leave management and performance evaluation.",
     tags: ["HRIS", "Development"],
