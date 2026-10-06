@@ -29,7 +29,7 @@ export default function Recommendations() {
       <Reveal>
         <h2 className="eyebrow">04 · Recommendations</h2>
         <h3 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
-          What people say
+          In their own words
         </h3>
         <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted">
           Recommendations from the people I worked with at Fonepay.
