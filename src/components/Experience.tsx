@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { experience, projects } from "@/lib/data";
 import CompanyLogo from "./CompanyLogo";
+import ProjectImage from "./ProjectImage";
 import Reveal from "./Reveal";
 
 // Bold metrics and project names so skimmers catch the key facts.
@@ -74,6 +75,16 @@ export default function Experience() {
                   ))}
                 </ul>
               </details>
+            )}
+            {job.photo && (
+              <figure className="mt-4 max-w-md">
+                <ProjectImage
+                  src={job.photo.src}
+                  title={job.photo.caption}
+                  className="aspect-[1000/853] rounded-xl border border-border"
+                />
+                <figcaption className="mt-2 text-xs text-muted">{job.photo.caption}</figcaption>
+              </figure>
             )}
           </Reveal>
         ))}

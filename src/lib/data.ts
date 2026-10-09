@@ -205,6 +205,11 @@ export const experience = [
     bullets: [
       "Facilitating learning in Project Management and Professional Practice by connecting academic theory with real-world industry practice.",
     ],
+    photo: {
+      src: "/teaching/sprint-standout-award.webp",
+      alt: "Grishma presenting a Sprint Standout Award certificate to a student team",
+      caption: "Presenting the Sprint Standout Award to a student team in COMP2700 at Macquarie University.",
+    },
   },
   {
     role: "Technical Product Coordinator-Lead",
