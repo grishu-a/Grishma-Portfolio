@@ -261,17 +261,20 @@ export const volunteering = [
   {
     role: "Macquarie Buddy",
     organisation: "Macquarie University",
+    logo: "/logos/macquarie.png",
     description:
       "Supported new students as they settled into university life in Sydney, helping them find their way around campus, services and study.",
   },
   {
     role: "President",
     organisation: "LEO Club · Lions Clubs International",
+    logo: "/logos/leo-club.jpg",
     description: "Led the club and its members in planning and delivering community service projects.",
   },
   {
     role: "Campus Director",
     organisation: "Hult Prize",
+    logo: "/logos/hult-prize.png",
     description:
       "Organised the on-campus round of the Hult Prize, a global social-enterprise startup competition, coordinating student teams, judges and the event from start to finish.",
   },

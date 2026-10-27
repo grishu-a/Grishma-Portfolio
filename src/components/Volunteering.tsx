@@ -47,12 +47,22 @@ export default function Volunteering() {
       <div className="mt-4 grid gap-4 sm:grid-cols-3">
         {others.map((item, index) => (
           <Reveal key={item.role} delay={index * 80} className="card-surface flex flex-col p-5">
-            <span
-              className={`icon-badge h-2 w-10 rounded-full ${badgeVariants[(index + 1) % 3]}`}
-              aria-hidden="true"
-            />
-            <h3 className="mt-3 font-semibold">{item.role}</h3>
-            <p className="text-sm text-muted">{item.organisation}</p>
+            <div className="flex items-center gap-3">
+              {item.logo ? (
+                <CompanyLogo src={item.logo} alt={`${item.organisation} logo`} size={32} />
+              ) : (
+                <span
+                  className={`icon-badge h-8 w-8 text-[11px] font-bold ${badgeVariants[(index + 1) % 3]}`}
+                  aria-hidden="true"
+                >
+                  {item.organisation.slice(0, 2).toUpperCase()}
+                </span>
+              )}
+              <div className="min-w-0">
+                <h3 className="font-semibold leading-snug">{item.role}</h3>
+                <p className="text-sm text-muted">{item.organisation}</p>
+              </div>
+            </div>
             <p className="mt-2 text-sm leading-relaxed text-muted">{item.description}</p>
           </Reveal>
         ))}
