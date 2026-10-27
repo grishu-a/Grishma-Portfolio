@@ -248,13 +248,13 @@ export const experience = [
 export const volunteering = [
   {
     role: "Speaker Support Lead",
-    organisation: "DevFest Sydney · GDG Sydney",
+    organisation: "DevFest Sydney · Google Developer Group Sydney",
     description:
-      "Member of the GDG Sydney organising committee for DevFest Sydney, leading speaker support so sessions ran smoothly and on time.",
+      "Member of the Google Developer Group Sydney organising committee for DevFest Sydney, leading speaker support so sessions ran smoothly and on time.",
     photo: {
       src: "/volunteering/devfest-sydney-team.webp",
       alt: "The DevFest Sydney organising committee on stage",
-      caption: "The DevFest Sydney organising committee, GDG Sydney.",
+      caption: "The DevFest Sydney organising committee, Google Developer Group Sydney.",
     },
   },
   {
