@@ -249,6 +249,7 @@ export const volunteering = [
   {
     role: "Speaker Support Lead",
     organisation: "DevFest Sydney · Google Developer Group Sydney",
+    logo: "/logos/google.jpg",
     description:
       "Member of the Google Developer Group Sydney organising committee for DevFest Sydney, leading speaker support so sessions ran smoothly and on time.",
     photo: {

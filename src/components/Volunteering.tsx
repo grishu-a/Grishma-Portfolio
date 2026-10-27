@@ -1,4 +1,5 @@
 import { volunteering } from "@/lib/data";
+import CompanyLogo from "./CompanyLogo";
 import ProjectImage from "./ProjectImage";
 import Reveal from "./Reveal";
 
@@ -29,8 +30,13 @@ export default function Volunteering() {
           <span className="font-mono text-[11px] uppercase tracking-wider text-muted">
             Most recent
           </span>
-          <h3 className="mt-2 text-lg font-semibold">{featured.role}</h3>
-          <p className="text-sm text-muted">{featured.organisation}</p>
+          <div className="mt-2 flex items-center gap-3">
+            {featured.logo && <CompanyLogo src={featured.logo} alt="Google logo" size={36} />}
+            <div>
+              <h3 className="text-lg font-semibold leading-snug">{featured.role}</h3>
+              <p className="text-sm text-muted">{featured.organisation}</p>
+            </div>
+          </div>
           <p className="mt-3 text-[15px] leading-relaxed text-muted">{featured.description}</p>
           {featured.photo && (
             <p className="mt-3 text-xs text-muted">{featured.photo.caption}</p>
