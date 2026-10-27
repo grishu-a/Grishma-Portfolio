@@ -3,6 +3,7 @@ import { experience, projects } from "@/lib/data";
 import CompanyLogo from "./CompanyLogo";
 import ProjectImage from "./ProjectImage";
 import Reveal from "./Reveal";
+import Volunteering from "./Volunteering";
 
 // Bold metrics and project names so skimmers catch the key facts.
 const escapeRegExp = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -89,6 +90,7 @@ export default function Experience() {
           </Reveal>
         ))}
       </div>
+      <Volunteering />
     </section>
   );
 }

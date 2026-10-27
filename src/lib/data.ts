@@ -245,6 +245,37 @@ export const experience = [
   },
 ];
 
+export const volunteering = [
+  {
+    role: "Speaker Support Lead",
+    organisation: "DevFest Sydney · GDG Sydney",
+    description:
+      "Member of the GDG Sydney organising committee for DevFest Sydney, leading speaker support so sessions ran smoothly and on time.",
+    photo: {
+      src: "/volunteering/devfest-sydney-team.webp",
+      alt: "The DevFest Sydney organising committee on stage",
+      caption: "The DevFest Sydney organising committee, GDG Sydney.",
+    },
+  },
+  {
+    role: "Macquarie Buddy",
+    organisation: "Macquarie University",
+    description:
+      "Supported new students as they settled into university life in Sydney, helping them find their way around campus, services and study.",
+  },
+  {
+    role: "President",
+    organisation: "LEO Club · Lions Clubs International",
+    description: "Led the club and its members in planning and delivering community service projects.",
+  },
+  {
+    role: "Campus Director",
+    organisation: "Hult Prize",
+    description:
+      "Organised the on-campus round of the Hult Prize, a global social-enterprise startup competition, coordinating student teams, judges and the event from start to finish.",
+  },
+];
+
 export const education = [
   {
     school: "Macquarie University",
