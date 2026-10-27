@@ -5,18 +5,24 @@ import Reveal from "./Reveal";
 
 const badgeVariants = ["", "icon-badge-b", "icon-badge-c"];
 
-// Rendered inside the Experience section, like Certifications sits inside Education.
 export default function Volunteering() {
   const [featured, ...others] = volunteering;
   if (!featured) return null;
 
   return (
-    <div id="volunteering" className="mt-14 scroll-mt-20">
+    <section id="volunteering" className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
       <Reveal>
-        <h4 className="font-mono text-xs uppercase tracking-widest text-muted">Volunteering</h4>
+        <h2 className="eyebrow">05 · Volunteering</h2>
+        <h3 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
+          Volunteering &amp; Community
+        </h3>
+        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted">
+          Leading and supporting communities outside my day job, from Sydney&apos;s developer
+          community to student life and social enterprise.
+        </p>
       </Reveal>
 
-      <Reveal className="card-surface mt-4 flex flex-col overflow-hidden md:flex-row">
+      <Reveal className="card-surface mt-8 flex flex-col overflow-hidden md:flex-row">
         {featured.photo && (
           <figure className="md:w-1/2 md:shrink-0">
             <ProjectImage
@@ -67,6 +73,6 @@ export default function Volunteering() {
           </Reveal>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

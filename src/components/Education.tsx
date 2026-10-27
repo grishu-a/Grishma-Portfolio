@@ -8,7 +8,7 @@ export default function Education() {
   return (
     <section id="education" className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
       <Reveal>
-        <h2 className="eyebrow">06 · Education &amp; Certifications</h2>
+        <h2 className="eyebrow">07 · Education &amp; Certifications</h2>
         <h3 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
           Education &amp; Certifications
         </h3>

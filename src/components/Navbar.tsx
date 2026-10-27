@@ -12,13 +12,15 @@ const links = [
   { href: "#insights", label: "Insights" },
   { href: "#experience", label: "Experience" },
   { href: "#recommendations", label: "Recommendations" },
+  { href: "#volunteering", label: "Volunteering" },
   { href: "#skills", label: "Skills" },
   { href: "#education", label: "Education" },
   { href: "#contact", label: "Contact" },
 ];
 
-// Contact is covered by the "Get in touch" button on desktop.
-const desktopHidden = new Set(["#contact"]);
+// Kept to the mobile menu so the desktop bar fits: Contact is covered by the
+// "Get in touch" button, and Volunteering sits right after Recommendations.
+const desktopHidden = new Set(["#contact", "#volunteering"]);
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);

@@ -6,6 +6,7 @@ import Projects from "@/components/Projects";
 import Insights from "@/components/Insights";
 import Experience from "@/components/Experience";
 import Recommendations from "@/components/Recommendations";
+import Volunteering from "@/components/Volunteering";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -50,9 +51,12 @@ export default function Home() {
         </div>
         <Recommendations />
         <div className="band">
-          <Skills />
+          <Volunteering />
         </div>
-        <Education />
+        <Skills />
+        <div className="band">
+          <Education />
+        </div>
         <Contact />
       </main>
       <Footer />
