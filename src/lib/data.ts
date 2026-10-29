@@ -217,6 +217,7 @@ export const experience = [
   {
     role: "Project Management Officer Intern",
     company: "Zeptosky · Sydney",
+    logo: "/logos/zeptosky.png",
     period: "Jul 2026 – Oct 2026",
     bullets: [
       "Coordinated software development and client projects end to end, from initiation to delivery, keeping timelines and milestones on track.",

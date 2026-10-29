@@ -30,6 +30,7 @@ const companies = [
   { name: "Fonepay", logo: "/logos/fonepay.jpg" },
   { name: "Alipay+" },
   { name: "Macquarie University", logo: "/logos/macquarie.png" },
+  { name: "Zeptosky", logo: "/logos/zeptosky.png" },
   { name: "Neosoftware", logo: "/logos/neosoftware.png" },
 ];
 
