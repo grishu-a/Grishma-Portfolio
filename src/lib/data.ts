@@ -204,6 +204,9 @@ export const experience = [
     period: "Jul 2026 – present",
     bullets: [
       "Teach Project Management and Professional Practice, connecting academic theory with real-world industry practice from my fintech delivery experience.",
+      "Run tutorials and guide student teams through their group projects, helping them plan, collaborate and deliver.",
+      "Mark assessments and give constructive written feedback to help students improve.",
+      "Hold consultations to answer student questions and support them through the course.",
     ],
     photo: {
       src: "/teaching/sprint-standout-award.webp",
