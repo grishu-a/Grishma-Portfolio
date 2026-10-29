@@ -215,7 +215,13 @@ export const experience = [
     role: "Project Management Officer Intern",
     company: "Zeptosky · Sydney",
     period: "Jul 2026 – Oct 2026",
-    bullets: [] as string[],
+    bullets: [
+      "Coordinated software development and client projects end to end, from initiation to delivery, keeping timelines and milestones on track.",
+      "Acted as the link between clients, developers, designers and stakeholders, gathering requirements and keeping everyone aligned with regular project updates.",
+      "Managed risks and change requests, escalating issues to management early so delivery stayed on schedule.",
+      "Owned project documentation, meeting minutes, status reports and records, giving management and clients clear visibility of progress.",
+      "Upheld quality standards through to handover, supporting smooth project delivery and client satisfaction.",
+    ],
   },
   {
     role: "Technical Product Coordinator-Lead",
