@@ -212,6 +212,12 @@ export const experience = [
     },
   },
   {
+    role: "Project Management Officer Intern",
+    company: "Zeptosky · Sydney",
+    period: "Jul 2026 – Oct 2026",
+    bullets: [] as string[],
+  },
+  {
     role: "Technical Product Coordinator-Lead",
     company: "Fonepay",
     logo: "/logos/fonepay.jpg",

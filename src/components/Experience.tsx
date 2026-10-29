@@ -27,7 +27,7 @@ function highlight(text: string): ReactNode[] {
     );
 }
 
-const FULL_DETAIL_ROLES = 2;
+const FULL_DETAIL_ROLES = 3;
 
 export default function Experience() {
   return (
@@ -55,7 +55,8 @@ export default function Experience() {
               </div>
               <span className="font-mono text-xs text-muted">{job.period}</span>
             </div>
-            {index < FULL_DETAIL_ROLES || job.bullets.length === 1 ? (
+            {job.bullets.length === 0 ? null : index < FULL_DETAIL_ROLES ||
+              job.bullets.length === 1 ? (
               <ul className="mt-2 list-disc space-y-1.5 pl-5 text-[15px] leading-relaxed text-muted">
                 {job.bullets.map((bullet) => (
                   <li key={bullet}>{highlight(bullet)}</li>
