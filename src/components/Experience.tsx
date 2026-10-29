@@ -55,6 +55,9 @@ export default function Experience() {
               </div>
               <span className="font-mono text-xs text-muted">{job.period}</span>
             </div>
+            {/* With a photo, the text and a small thumbnail sit side by side. */}
+            <div className={job.photo ? "sm:flex sm:items-start sm:gap-6" : ""}>
+            <div className="min-w-0 flex-1">
             {job.bullets.length === 0 ? null : index < FULL_DETAIL_ROLES ||
               job.bullets.length === 1 ? (
               <ul className="mt-2 list-disc space-y-1.5 pl-5 text-[15px] leading-relaxed text-muted">
@@ -77,16 +80,20 @@ export default function Experience() {
                 </ul>
               </details>
             )}
+            </div>
             {job.photo && (
-              <figure className="mt-4 max-w-md">
+              <figure className="mt-4 w-56 shrink-0 sm:mt-2 sm:w-52">
                 <ProjectImage
                   src={job.photo.src}
                   title={job.photo.caption}
-                  className="aspect-[1000/853] rounded-xl border border-border"
+                  className="aspect-[1000/853] rounded-lg border border-border"
                 />
-                <figcaption className="mt-2 text-xs text-muted">{job.photo.caption}</figcaption>
+                <figcaption className="mt-1.5 text-[11px] leading-snug text-muted">
+                  {job.photo.caption}
+                </figcaption>
               </figure>
             )}
+            </div>
           </Reveal>
         ))}
       </div>

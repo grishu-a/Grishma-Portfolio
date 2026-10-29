@@ -203,7 +203,7 @@ export const experience = [
     logo: "/logos/macquarie.png",
     period: "Jul 2026 – present",
     bullets: [
-      "Facilitating learning in Project Management and Professional Practice by connecting academic theory with real-world industry practice.",
+      "Teach Project Management and Professional Practice, connecting academic theory with real-world industry practice from my fintech delivery experience.",
     ],
     photo: {
       src: "/teaching/sprint-standout-award.webp",
