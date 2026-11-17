@@ -162,6 +162,9 @@ export default function Projects() {
                   {project.role && (
                     <p className="mt-1 font-mono text-[11px] text-muted">{project.role}</p>
                   )}
+                  {project.impact && (
+                    <p className="gradient-text mt-2 text-sm font-bold">{project.impact}</p>
+                  )}
                   <p className="mt-2 flex-1 text-sm text-muted">{project.description}</p>
                   <Tags tags={project.tags} />
                 </div>

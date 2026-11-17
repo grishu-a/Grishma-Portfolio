@@ -143,15 +143,17 @@ export const projects = [
   {
     title: "Cashback Management System",
     role: "Led from initiation to deployment",
+    impact: "+40% retention",
     description:
-      "A platform to automate cashback campaigns for new and existing users, covering calculation, approval, tracking, and reporting to boost user engagement and campaign ROI.",
+      "Automated cashback campaigns for new and existing users, covering calculation, approval, tracking and reporting. Together with the Winner Announcement System, this automation increased retention by 40%, reduced errors by 80% and cut manual effort by 70%.",
     tags: ["Product Management", "Growth", "Fintech"],
   },
   {
     title: "Winner Announcement System",
     role: "Led from initiation to deployment",
+    impact: "−80% errors · −70% manual effort",
     description:
-      "An automated system for selecting and announcing winners of promotional campaigns, ensuring transparency, accuracy and timely communication with participants.",
+      "Automated selecting and announcing winners of promotional campaigns, ensuring transparency, accuracy and timely communication. Part of the campaign automation that reduced errors by 80% and cut manual effort by 70%.",
     tags: ["Automation", "Product Management"],
   },
 ];
@@ -203,8 +205,8 @@ export const experience = [
     logo: "/logos/macquarie.png",
     period: "Jul 2026 – present",
     bullets: [
-      "Teach Project Management and Professional Practice, connecting academic theory with real-world industry practice from my fintech delivery experience.",
-      "Run tutorials and guide student teams through their group projects, helping them plan, collaborate and deliver.",
+      "Teach Project Management and Professional Practice to two classes of 30+ students, connecting academic theory with real-world industry practice from my fintech delivery experience.",
+      "Run tutorials applying Agile and Waterfall frameworks to real-world industry case studies, and guide student teams through their group projects.",
       "Mark assessments and give constructive written feedback to help students improve.",
       "Hold consultations to answer student questions and support them through the course.",
     ],
@@ -221,11 +223,11 @@ export const experience = [
     period: "Jul 2026 – Oct 2026",
     bullets: [
       "Earned a perfect 100/100 in my final internship supervisor evaluation from the CEO.",
-      "Coordinated software development and client projects end to end, from initiation to delivery, keeping timelines and milestones on track.",
+      "Took ownership of five in-flight software products, coordinating development, design, QA and marketing teams, tracking delivery in Jira and Confluence, and reporting progress and risks directly to the CEO.",
+      "Led a new client engagement for a graduation ceremony portal, from on-site requirements gathering to a defined project scope.",
       "Acted as the link between clients, developers, designers and stakeholders, gathering requirements and keeping everyone aligned with regular project updates.",
       "Managed risks and change requests, escalating issues to management early so delivery stayed on schedule.",
-      "Owned project documentation, meeting minutes, status reports and records, giving management and clients clear visibility of progress.",
-      "Upheld quality standards through to handover, supporting smooth project delivery and client satisfaction.",
+      "Owned project documentation, meeting minutes, status reports and records, and upheld quality standards through to handover.",
     ],
   },
   {
@@ -234,7 +236,8 @@ export const experience = [
     logo: "/logos/fonepay.jpg",
     period: "Feb 2024 – Jul 2025",
     bullets: [
-      "Led multi-market payment initiatives from initiation to deployment, including the Dispute Management System, Alipay+, Fonepay Circle, Winner Announcement System, and Cashback Management System, enhancing operational scalability and supporting thousands of daily transactions.",
+      "As Product Owner and Scrum Master, led five payment products from initiation to deployment, including the Dispute Management System, Alipay+, Fonepay Circle, Winner Announcement System and Cashback Management System.",
+      "Automated cashback and campaign winner processes, increasing retention by 40%, reducing errors by 80% and cutting manual effort by 70%.",
       "Optimised workflows across cross-functional teams (product, tech, and operations), reducing dispute resolution time by 30% and improving process efficiency.",
       "Implemented system enhancements and monitoring dashboards across the Fonepay platform, strengthening transaction oversight and mitigating operational risk.",
       "Bridged communication between business and technical stakeholders, translating requirements into actionable solutions and improving project delivery speed and quality.",
