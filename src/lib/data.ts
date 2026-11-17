@@ -220,6 +220,7 @@ export const experience = [
     logo: "/logos/zeptosky.png",
     period: "Jul 2026 – Oct 2026",
     bullets: [
+      "Earned a perfect 100/100 in my final internship supervisor evaluation from the CEO.",
       "Coordinated software development and client projects end to end, from initiation to delivery, keeping timelines and milestones on track.",
       "Acted as the link between clients, developers, designers and stakeholders, gathering requirements and keeping everyone aligned with regular project updates.",
       "Managed risks and change requests, escalating issues to management early so delivery stayed on schedule.",

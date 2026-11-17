@@ -8,7 +8,7 @@ import Reveal from "./Reveal";
 const escapeRegExp = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 const highlightPattern = new RegExp(
-  `(\\d+(?:\\.\\d+)?(?:%|M\\+|\\+)|${projects
+  `(\\d+\\/\\d+|\\d+(?:\\.\\d+)?(?:%|M\\+|\\+)|${projects
     .map((project) => escapeRegExp(project.title))
     .join("|")})`,
 );
