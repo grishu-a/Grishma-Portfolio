@@ -113,7 +113,7 @@ export default function Hero() {
             <Rise delay={300} className="no-print mt-5 text-sm text-muted">
               Start with{" "}
               <Link href="#projects" className="font-medium text-accent hover:underline">
-                3 case studies
+                my major projects
               </Link>{" "}
               or{" "}
               <Link href="#insights" className="font-medium text-accent hover:underline">
