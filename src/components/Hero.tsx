@@ -70,7 +70,7 @@ export default function Hero() {
         aria-hidden="true"
       />
       <div className="relative mx-auto max-w-5xl px-6 pb-20 pt-16 sm:pt-24">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.2fr_1fr]">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.5fr_1fr]">
           <div>
             <Rise className="flex w-fit items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted">
               <span className="relative flex h-2 w-2">
@@ -83,7 +83,7 @@ export default function Hero() {
               <p className="eyebrow mt-6">Hi, I&apos;m {profile.name.split(" ")[0]}</p>
             </Rise>
             <Rise delay={140}>
-              <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
+              <h1 className="mt-4 text-4xl font-bold tracking-tight text-balance sm:text-5xl lg:text-[2.625rem] lg:leading-[1.1]">
                 {primaryRole}
                 {secondaryRole && (
                   <>

@@ -8,7 +8,7 @@ const screens = [
 
 export default function HeroVisual() {
   return (
-    <figure className="hero-visual relative mx-auto h-[460px] w-full max-w-[400px]">
+    <figure className="hero-visual relative mx-auto h-[460px] w-full max-w-[400px] -translate-x-6 xl:translate-x-0">
       {screens.map((screen) => (
         <div key={screen.src} className={screen.className}>
           <Image

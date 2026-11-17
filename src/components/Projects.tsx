@@ -128,7 +128,6 @@ export default function Projects() {
                 delay={index * 100}
                 className="card-surface flex flex-col overflow-hidden"
               >
-                {/* Every card gets the same header height so the row lines up. */}
                 {project.image ? (
                   <ProjectImage
                     src={project.image}
@@ -137,28 +136,23 @@ export default function Projects() {
                     className="h-28"
                   />
                 ) : (
+                  // Slim accent strip instead of an empty placeholder block.
                   <div
-                    className={`icon-badge flex h-28 w-full items-end rounded-none p-5 ${
-                      badgeVariants[(index + FEATURED_COUNT) % 3]
-                    }`}
+                    className={`h-1 w-full ${["bg-accent", "bg-accent-2", "bg-accent-3"][(index + FEATURED_COUNT) % 3]}`}
                     aria-hidden="true"
-                  >
-                    <span className="font-mono text-4xl font-bold opacity-40">
-                      {String(index + FEATURED_COUNT + 1).padStart(2, "0")}
-                    </span>
-                  </div>
+                  />
                 )}
                 <div className="flex flex-1 flex-col p-5">
-                  {project.image && (
+                  <div className="flex items-center gap-3">
                     <span
-                      className={`icon-badge mb-3 h-8 w-8 font-mono text-[11px] font-semibold ${
+                      className={`icon-badge h-8 w-8 font-mono text-[11px] font-semibold ${
                         badgeVariants[(index + FEATURED_COUNT) % 3]
                       }`}
                     >
                       {String(index + FEATURED_COUNT + 1).padStart(2, "0")}
                     </span>
-                  )}
-                  <h3 className="font-semibold">{project.title}</h3>
+                    <h3 className="font-semibold leading-snug">{project.title}</h3>
+                  </div>
                   {project.role && (
                     <p className="mt-1 font-mono text-[11px] text-muted">{project.role}</p>
                   )}

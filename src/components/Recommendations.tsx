@@ -58,16 +58,17 @@ export default function Recommendations() {
           <Reveal
             key={rec.name}
             delay={(index % 2) * 100}
-            className="card-surface flex flex-col p-6 sm:p-8"
+            className="card-surface relative flex flex-col overflow-hidden p-6 sm:p-8"
           >
-            <figure className="flex h-full flex-col">
-              <span
-                className="gradient-text font-serif text-6xl leading-none"
-                aria-hidden="true"
-              >
-                &ldquo;
-              </span>
-              <p className="mt-1 text-xl font-bold leading-snug tracking-tight">
+            {/* Large decorative quote mark in the corner, out of the text flow. */}
+            <span
+              className="gradient-text pointer-events-none absolute right-5 top-1 select-none font-serif text-8xl leading-none opacity-30"
+              aria-hidden="true"
+            >
+              &rdquo;
+            </span>
+            <figure className="relative flex h-full flex-col">
+              <p className="pr-10 text-xl font-bold leading-snug tracking-tight">
                 {rec.headline}
               </p>
               <blockquote className="mt-4 flex-1 text-[15px] leading-relaxed text-muted">
