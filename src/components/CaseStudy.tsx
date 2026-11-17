@@ -185,3 +185,50 @@ export function SkillChips({ skills }: { skills: string[] }) {
     </ul>
   );
 }
+
+export function Comparison({
+  leftLabel,
+  rightLabel,
+  rows,
+}: {
+  leftLabel: string;
+  rightLabel: string;
+  rows: { left: string; right: string }[];
+}) {
+  return (
+    <div className="mt-6 overflow-x-auto rounded-xl border border-border">
+      <table className="w-full min-w-[480px] text-left text-sm">
+        <thead className="bg-card">
+          <tr>
+            <th scope="col" className="w-1/2 p-3 font-semibold">{leftLabel}</th>
+            <th scope="col" className="w-1/2 p-3 font-semibold">{rightLabel}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row) => (
+            <tr key={row.left} className="border-t border-border align-top">
+              <td className="p-3 text-muted">{row.left}</td>
+              <td className="p-3">{row.right}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+export function Sources({ items }: { items: { label: string; href: string }[] }) {
+  return (
+    <p className="mt-4 text-xs text-muted">
+      Sources:{" "}
+      {items.map((item, i) => (
+        <span key={item.href}>
+          <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+            {item.label}
+          </a>
+          {i < items.length - 1 ? " · " : ""}
+        </span>
+      ))}
+    </p>
+  );
+}

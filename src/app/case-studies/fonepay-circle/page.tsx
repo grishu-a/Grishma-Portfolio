@@ -4,9 +4,11 @@ import {
   CaseStudyShell,
   Challenges,
   CheckCards,
+  Comparison,
   Prose,
   Section,
   SkillChips,
+  Sources,
   Steps,
 } from "@/components/CaseStudy";
 import CirclePrototype from "@/components/CirclePrototype";
@@ -213,6 +215,30 @@ export default function FonepayCircleCaseStudy() {
             shape real-time payments here.
           </p>
         </Prose>
+        <Comparison
+          leftLabel="Fonepay Circle (Nepal)"
+          rightLabel="PayID (Australia)"
+          rows={[
+            {
+              left: "Send money using just a mobile number",
+              right: "Pay using a mobile number, email address, ABN or Organisation Identifier",
+            },
+            {
+              left: "Flows designed so people are sure they are paying the right person",
+              right: "The name linked to the PayID is shown before you hit send",
+            },
+            {
+              left: "Works across Fonepay's network of banks and wallets",
+              right: "Works across banks connected to the New Payments Platform",
+            },
+          ]}
+        />
+        <Sources
+          items={[
+            { label: "Australian Payments Plus: PayID", href: "https://www.auspayplus.com.au/brands/payid" },
+            { label: "Australian Payments Plus: NPP", href: "https://www.auspayplus.com.au/solutions/npp" },
+          ]}
+        />
       </Section>
 
       <Section number="07 · Skills demonstrated" title="What this project shows">

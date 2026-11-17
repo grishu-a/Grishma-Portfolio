@@ -3,10 +3,12 @@ import {
   CaseStudyShell,
   Challenges,
   CheckCards,
+  Comparison,
   Highlight,
   Prose,
   Section,
   SkillChips,
+  Sources,
   Steps,
 } from "@/components/CaseStudy";
 import DisputeFlow from "@/components/DisputeFlow";
@@ -154,7 +156,54 @@ export default function DisputeManagementCaseStudy() {
         </Highlight>
       </Section>
 
-      <Section number="06 · Skills demonstrated" title="What this project shows">
+      <Section number="06 · Why it matters in Australia" title="The same problem Australian complaint rules address">
+        <Prose>
+          <p>
+            In Australia, handling customer complaints well isn&apos;t optional. Under ASIC&apos;s
+            Regulatory Guide 271, in effect since 5 October 2021, financial firms must record every
+            complaint they receive in an effective system that tracks the progress of each one, and
+            respond to standard complaints within 30 calendar days. Complaints that aren&apos;t
+            resolved can be taken to the Australian Financial Complaints Authority (AFCA).
+          </p>
+          <p>
+            The Dispute Management System I delivered at Fonepay was built around the same needs -
+            the kind of complaint and dispute handling that Australian banks, fintechs and payment
+            providers rely on to meet these obligations.
+          </p>
+        </Prose>
+        <Comparison
+          leftLabel="What I delivered at Fonepay"
+          rightLabel="What Australian firms must do (ASIC RG 271)"
+          rows={[
+            {
+              left: "Every dispute logged automatically as a case with a clear status",
+              right: "Record all complaints received in an effective complaints system",
+            },
+            {
+              left: "Case tracking, routing and dashboards showing open cases and progress",
+              right: "Keep track of the progress of each complaint",
+            },
+            {
+              left: "Automatic routing and notifications, cutting resolution time by 30%",
+              right: "Respond to standard complaints within 30 calendar days",
+            },
+          ]}
+        />
+        <Sources
+          items={[
+            {
+              label: "ASIC Regulatory Guide 271: Internal dispute resolution",
+              href: "https://download.asic.gov.au/media/3olo5aq5/rg271-published-2-september-2021.pdf",
+            },
+            {
+              label: "ASIC: Dispute resolution and AFCA",
+              href: "https://asic.gov.au/regulatory-resources/financial-services/dispute-resolution/",
+            },
+          ]}
+        />
+      </Section>
+
+      <Section number="07 · Skills demonstrated" title="What this project shows">
         <SkillChips skills={skills} />
       </Section>
     </CaseStudyShell>

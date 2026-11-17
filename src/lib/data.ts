@@ -99,7 +99,7 @@ export const projects = [
     role: "Led from initiation to deployment",
     impact: "11+ countries · 1.7M+ merchants",
     description:
-      "Led delivery of Fonepay's Alipay+ integration, letting international visitors pay across Nepal with their home e-wallets such as Alipay, KakaoPay and GCash. Coordinated the Alipay+ team, banks, settlement and finance, compliance and engineering through to deployment.",
+      "Led delivery of Fonepay's Alipay+ integration, letting international visitors pay across Nepal with their home e-wallets such as Alipay, KakaoPay and GCash. Coordinated the Alipay+ team, banks, settlement and finance, compliance and engineering through to deployment - the same cross-border wallet acceptance Australian merchants now offer through providers like ANZ Worldline.",
     tags: ["Cross-Border Payments", "Fintech", "Partnerships"],
     caseStudy: "/case-studies/alipay-plus",
     image: "/projects/alipay.png",
@@ -127,7 +127,7 @@ export const projects = [
     role: "Led from initiation to deployment",
     impact: "30% faster dispute resolution",
     description:
-      "Every customer and merchant dispute was handled manually, creating heavy effort for the operations team. I led delivery of a centralised platform that introduced automation for case tracking, resolution workflows and notifications, so teams could resolve disputes faster with far less manual work.",
+      "Every customer and merchant dispute was handled manually, creating heavy effort for the operations team. I led delivery of a centralised platform that introduced automation for case tracking, resolution workflows and notifications, so teams could resolve disputes faster with far less manual work - the same kind of complaints system Australian financial firms need under ASIC's dispute resolution rules.",
     tags: ["Fintech", "Product Management", "Operations", "Automation"],
     caseStudy: "/case-studies/dispute-management",
     image: "/projects/dispute.jpeg",

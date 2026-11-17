@@ -3,10 +3,12 @@ import {
   CaseStudyShell,
   Challenges,
   CheckCards,
+  Comparison,
   Highlight,
   Prose,
   Section,
   SkillChips,
+  Sources,
   Steps,
 } from "@/components/CaseStudy";
 import { profile } from "@/lib/data";
@@ -153,7 +155,51 @@ export default function AlipayPlusCaseStudy() {
         </p>
       </Section>
 
-      <Section number="06 · Skills demonstrated" title="What this project shows">
+      <Section number="06 · Why it matters in Australia" title="The same opportunity Australian merchants have">
+        <Prose>
+          <p>
+            Australian merchants face the same opportunity from the other side. Payment providers
+            such as ANZ Worldline let Australian businesses accept Alipay+ and WeChat Pay, making it
+            easier for overseas-born residents and short-term visitors - such as tourists and
+            international students - to pay with the wallets they already use.
+          </p>
+          <p>
+            That&apos;s the problem I delivered for in Nepal: connecting international wallets to
+            local merchants, coordinating a global partner with banks, settlement, compliance and
+            engineering, and testing across many wallets. ANZ Worldline&apos;s merchant guide even
+            sets out an Alipay wallet dispute handling process - where cross-border payments and
+            dispute management meet, two areas I&apos;ve delivered products in.
+          </p>
+        </Prose>
+        <Comparison
+          leftLabel="What I delivered in Nepal"
+          rightLabel="The same need in Australia"
+          rows={[
+            {
+              left: "Visitors from 11+ countries paying with their home e-wallets",
+              right: "Tourists and international students paying with Alipay+ and WeChat Pay",
+            },
+            {
+              left: "Acceptance across 1.7M+ existing Fonepay QR merchants",
+              right: "Merchants accepting Alipay+ through providers such as ANZ Worldline",
+            },
+            {
+              left: "Coordinating Alipay+, banks, settlement, compliance and engineering",
+              right: "Partner, acquirer and compliance coordination needed to offer international wallets",
+            },
+          ]}
+        />
+        <Sources
+          items={[
+            {
+              label: "ANZ Worldline: Alipay+ and WeChat Pay merchant information guide",
+              href: "https://anzworldline.com.au/content/dam/anzworldline/docs/200043402-br-alipaypluswechatpay-informationguide-aus-en.pdf",
+            },
+          ]}
+        />
+      </Section>
+
+      <Section number="07 · Skills demonstrated" title="What this project shows">
         <SkillChips skills={skills} />
       </Section>
     </CaseStudyShell>
