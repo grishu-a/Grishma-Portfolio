@@ -318,6 +318,12 @@ export const certifications = [
     credentialUrl: "https://s3.amazonaws.com/scruminc-certs/RPO-4516817",
   },
   {
+    title: "Teaching in Practice for STEMM (TIPS)",
+    issuer: "Macquarie University",
+    logo: "/logos/macquarie.png",
+    credentialUrl: "/certificates/teaching-in-practice-stemm.webp",
+  },
+  {
     title: "Agile Project Management",
     issuer: "Google",
     logo: "/logos/google.jpg",
