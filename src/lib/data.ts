@@ -32,8 +32,8 @@ export const profile = {
   photo: "/profile/grishma.webp",
   location: "Sydney, NSW, Australia",
   email: "amatya650@gmail.com",
-  // Add the résumé to public/ and set this to e.g. "/resume.pdf" to show the download button
-  resumeUrl: "",
+  // Public copy of the CV with the phone number removed
+  resumeUrl: "/Grishma-Amatya-Resume.pdf",
   socials: {
     linkedin: "https://www.linkedin.com/in/grishma-amatya",
   },

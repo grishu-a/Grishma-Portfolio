@@ -105,12 +105,14 @@ export default function Hero() {
                 <ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
               {profile.resumeUrl ? (
-                <Link
+                <a
                   href={profile.resumeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="rounded-full border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:bg-card"
                 >
                   Download résumé
-                </Link>
+                </a>
               ) : (
                 <a
                   href={profile.socials.linkedin}
